@@ -1,27 +1,20 @@
 import React from "react";
 import Header from "./Components/Header";
-import Carousel from "./Components/Carousel";
+import Jumbotron from "./Components/Jumbotron";
+import Carosello from "./Components/Carosello";
+import "@fortawesome/fontawesome-free/css/all.css";
 
 const App = () => {
-  const images = [
-    "https://example.com/image1.jpg",
-    "https://example.com/image2.jpg",
-    "https://example.com/image3.jpg",
-  ];
-
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          backgroundColor: "#333",
-        }}
-      >
-        <Header />
-        <Carousel images={images} />
-      </div>
+      <Header />
+
+      <Jumbotron
+        dataEvento="16 Maggio 2023"
+        Titolo1="Aues Eus,"
+        Titolo2="Vesuvio luce che brucia"
+        descrizioneBreve="Performance artistica Enzo Marino"
+      />
     </>
   );
 };

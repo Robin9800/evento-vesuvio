@@ -1,0 +1,30 @@
+/* Stile per schermi con larghezza inferiore a 576px */
+@media (max-width: 575.98px) {
+  .img-fluid {
+    max-width: 60% !important;
+    height: auto !important;
+  }
+}
+
+/* Stile per schermi con larghezza compresa tra 576px e 768px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .img-fluid {
+    max-width: 50% !important;
+    height: auto !important;
+  }
+}
+
+/* Stile per schermi con larghezza compresa tra 768px e 902px */
+@media (min-width: 768px) and (max-width: 902px) {
+  .img-fluid {
+    max-width: 40% !important;
+    height: auto !important;
+  }
+}
+/* Stile per schermi con larghezza superiore a 903px */
+@media (min-width: 903px) {
+  .img-fluid {
+    max-width: 26% !important;
+    height: auto !important;
+  }
+}
