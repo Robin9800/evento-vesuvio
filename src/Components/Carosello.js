@@ -1,6 +1,5 @@
 import React from "react";
 import { MDBCarousel, MDBCarouselItem } from "mdb-react-ui-kit";
-import "../Css/Carosello.css";
 import Vesuvio from "./Immagini/Vesuvio.jpg";
 import Vesuvio2 from "./Immagini/Vesuvio2.jpeg";
 import Vesuvio3 from "./Immagini/Vesuvio3.jpg";

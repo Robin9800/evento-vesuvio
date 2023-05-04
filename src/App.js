@@ -1,21 +1,24 @@
 import React from "react";
 import Header from "./Components/Header";
 import Jumbotron from "./Components/Jumbotron";
-import Carosello from "./Components/Carosello";
-import "@fortawesome/fontawesome-free/css/all.css";
+import ChiSiamo from "./Components/ChiSiamo";
+import AuesEus from "./Components/AuesEus";
+import Patrocini from "./Components/Patrocini";
+import Footer from "./Components/Footer";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 const App = () => {
   return (
-    <>
+    <BrowserRouter>
       <Header />
-
-      <Jumbotron
-        dataEvento="16 Maggio 2023"
-        Titolo1="Aues Eus,"
-        Titolo2="Vesuvio luce che brucia"
-        descrizioneBreve="Performance artistica Enzo Marino"
-      />
-    </>
+      <Switch>
+        <Route exact path="/" component={Jumbotron} />
+        <Route path="/chi-siamo" component={ChiSiamo} />
+        <Route path="/aues-eus" component={AuesEus} />
+        <Route path="/patrocini" component={Patrocini} />
+      </Switch>
+      <Footer />
+    </BrowserRouter>
   );
 };
 

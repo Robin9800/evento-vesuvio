@@ -1,54 +1,9 @@
-/*GENERICS*/
-* {
-  box-sizing: border-box;
-  padding: 0px;
-  margin: 0px;
-}
-
-/*UTILITIES*/
-.border-jumbotron {
-  border: 2px solid white;
-}
-
-/*JUMBOTRON*/
-.container-jumbotron {
-  position: relative;
-  width: auto;
-  height: 100vh;
-}
-
-.background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-.jumbotron-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-h1 {
-  color: white;
-}
 h2 {
-  color: #ffde14;
-  font-weight: bold;
-}
-p {
-  color: #ffde14;
+  color: #ff8e00;
   font-weight: bold;
 }
 
-/* Stile per schermi con larghezza compresa tra 768px e 902px */
+/* Stile per schermi con larghezza compresa tra 487px e 768px */
 @media (min-width: 487px) and (max-width: 768px) {
   .text-white {
     text-align: start;
@@ -65,7 +20,7 @@ p {
     font-size: 1rem !important;
   }
 }
-/* Stile per schermi con larghezza superiore a 902px */
+/* Stile per schermi con larghezza compresa tra 768px a 902px */
 @media (min-width: 768px) and (max-width: 902px) {
   .text-white {
     text-align: start;
@@ -83,7 +38,26 @@ p {
 /* Stile per schermi con larghezza superiore a 902px */
 @media (min-width: 902px) {
   .container-titoli {
-    margin-right: 22rem;
+    margin-right: 25rem;
+    margin-bottom: 5rem;
+  }
+  .text-white {
+    text-align: start;
+  }
+  h1 {
+    font-size: 3.5rem !important;
+  }
+  h2 {
+    font-size: 2rem !important;
+  }
+  p {
+    font-size: 1.5rem !important;
+  }
+}
+/* Stile per schermi con larghezza superiore a 1072px */
+@media (min-width: 1072px) {
+  .container-titoli {
+    margin-right: 24rem;
     margin-bottom: 5rem;
   }
   .text-white {
