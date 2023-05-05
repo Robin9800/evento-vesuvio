@@ -1,19 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import AnnaMarino from "./Immagini/AnnaMarino.jpeg";
-import ImmaGatto from "./Immagini/ImmaGatto.jpeg";
-import RedentaVitulano from "./Immagini/RedentaVitulano.jpeg";
+import Parcovesuvio from "./Immagini/Parco Vesuvio.jpeg";
+import Napoli from "./Immagini/Napoli.png";
+import Mav from "./Immagini/mav.jpeg";
 
 const SpeakerWrapper = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 `;
 
 const SpeakerColumn = styled.div`
-  flex-basis: calc(
-    50% - 20px
-  ); /* calcola la larghezza di ciascun elemento in modo che ci siano 20px di margine tra di essi */
   margin: 0 10px 30px;
 
   @media screen and (max-width: 768px) {
@@ -21,15 +16,23 @@ const SpeakerColumn = styled.div`
   }
 `;
 const SpeakerImage = styled.img`
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 6px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-out;
+  margin: 0 auto;
+`;
+
+const PatrocinioSection = styled.div`
   transition: transform 0.2s ease-out;
   margin: 0 auto; /* aggiunta della proprietà margin */
 
   &:hover {
     transform: scale(1.05);
+  }
+  a:hover {
+    text-decoration: none;
   }
 `;
 
@@ -86,6 +89,9 @@ const SpeakerCaption = styled.figcaption`
         }
       }
 
+      a:hover {
+        text-decoration: none;
+      }
       .fab {
         font-size: 18px;
       }
@@ -108,44 +114,48 @@ const SpeakerCaption = styled.figcaption`
 function PatrociniLoghi() {
   return (
     <SpeakerWrapper>
-      <SpeakerColumn>
-        <div className="d-flex flex-column mx-5">
-          <SpeakerImage src={AnnaMarino} alt="Anna Marino" />
-          <SpeakerCaption>
-            <h3>Cav Enzo Marino</h3>
-            <p></p>
-          </SpeakerCaption>
-        </div>
-      </SpeakerColumn>
+      <SpeakerColumn className="d-flex">
+        <PatrocinioSection className="d-flex flex-column mx-5">
+          <a
+            href="https://www.cittametropolitana.na.it/"
+            className="d-flex flex-column"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SpeakerImage src={Napoli} alt="Anna Marino" />
+            <SpeakerCaption>
+              <h3>Città Metropolitana Di Napoli</h3>
+            </SpeakerCaption>
+          </a>
+        </PatrocinioSection>
 
-      <SpeakerColumn>
-        <div className="d-flex flex-column mx-5">
-          <SpeakerImage src={AnnaMarino} alt="Anna Marino" />
-          <SpeakerCaption>
-            <h3>Anna Luisa Marino</h3>
-            <p></p>
-          </SpeakerCaption>
-        </div>
-      </SpeakerColumn>
+        <PatrocinioSection className="d-flex flex-column mx-5">
+          <a
+            href="https://www.parconazionaledelvesuvio.it/"
+            className="d-flex flex-column"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SpeakerImage src={Parcovesuvio} alt="Anna Marino" />
+            <SpeakerCaption>
+              <h3>Parco Nazionale Del Vesuvio</h3>
+            </SpeakerCaption>
+          </a>
+        </PatrocinioSection>
 
-      <SpeakerColumn>
-        <div className="d-flex flex-column mx-5">
-          <SpeakerImage src={ImmaGatto} alt="Anna Marino" />
-          <SpeakerCaption>
-            <h3>Immacolata Gatto</h3>
-            <p></p>
-          </SpeakerCaption>
-        </div>
-      </SpeakerColumn>
-
-      <SpeakerColumn>
-        <div className="d-flex flex-column mx-5">
-          <SpeakerImage src={RedentaVitulano} alt="Anna Marino" />
-          <SpeakerCaption>
-            <h3>Redenta Vitulano</h3>
-            <p></p>
-          </SpeakerCaption>
-        </div>
+        <PatrocinioSection className="d-flex flex-column mx-5">
+          <a
+            href="https://www.museomav.it/"
+            className="d-flex flex-column"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SpeakerImage src={Mav} alt="Anna Marino" />
+            <SpeakerCaption>
+              <h3>Museo Archeologico Virtuale</h3>
+            </SpeakerCaption>
+          </a>
+        </PatrocinioSection>
       </SpeakerColumn>
     </SpeakerWrapper>
   );

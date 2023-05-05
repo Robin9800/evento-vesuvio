@@ -27,7 +27,7 @@ const Img = styled.img`
 const SpeakerCaption = styled.figcaption`
   h3 {
     text-align: start;
-    font-size: 22px;
+    font-size: 1.6rem;
     font-weight: bold;
     margin-top: 2rem;
     margin-bottom: 0.8rem;
@@ -36,10 +36,10 @@ const SpeakerCaption = styled.figcaption`
 
   p {
     text-align: start;
-    font-size: 14px !important;
+    font-size: 1.2rem !important;
     font-weight: bolder;
     margin-bottom: 30px;
-    color: #868e96;
+    color: #868g99;
   }
 
   ul {
@@ -117,7 +117,7 @@ function EnzoInfo() {
               Enzo Marino (1945 Casoria – Napoli) pittore, scultore italiano.
               Cavaliere della Repubblica Italiana.
             </h3>
-            <p>
+            <p className="m-0">
               Frequenta la Scuola Libera del Nudo all’AA.BB.AA. di Napoli ma in
               effetti è allievo e maestro di se stesso. Nel 1975 produce la
               cartella serigrafica “Sedie” presente in vari musei del mondo.

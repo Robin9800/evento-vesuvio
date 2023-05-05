@@ -1,13 +1,35 @@
-import React, { useState } from "react";
-import ChiSiamoMembri from "./VigamaMembri";
-import Cratere from "./Immagini/Cratere.jpeg";
-import VesuvioTramonto from "./Immagini/tramonto3.jpeg";
-import InternationalArtists from "./Immagini/International Artists.jpeg";
+import React from "react";
+import aueseusvesuvio from "./Immagini/aueseusvesuvio.png";
+import cratere from "./Immagini/Cratere.jpeg";
 
 import styled from "styled-components";
 
-const ChiSiamoSection = styled.section`
+const Container = styled.div`
+  margin: 0 !important;
+  padding: 0 !important;
+`;
+const PatrociniSection = styled.section`
   font-size: 1rem !important;
+`;
+const TitoloSezione = styled.h1`
+  animation: slideInAndFade 1s ease-in-out;
+
+  @keyframes slideInAndFade {
+    from {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+`;
+const Descrizione = styled.p`
+  font-size: 1rem !important;
+
+  text-align: start;
+  margin-bottom: 30px;
 `;
 const CenteredDiv = styled.div`
   display: flex;
@@ -31,95 +53,140 @@ const CenteredDiv = styled.div`
     }
   }
 `;
-const Descrizione = styled.p`
-  font-size: 1rem !important;
+const Sezione = styled.div`
+  padding: 2rem 10rem 5rem 10rem;
 `;
 
-export default function AeusEus() {
+export default function Patrocini() {
   return (
-    <ChiSiamoSection
+    <PatrociniSection
       style={{
         backgroundColor: "#181818",
-        paddingTop: "4rem",
       }}
     >
-      <div
-        class="container px-5 py-5 mt-5 rounded-5"
+      <Container
+        class=" px-5 py-5 mt-5 rounded-5"
         style={{ backgroundColor: "#f4f1ee" }}
       >
-        <div class="row justify-content-center align-items-center flex-column mx-5">
-          <div class="col-xl-2 col-lg-7 col-md-10 d-flex justify-content-center">
-            <img
-              style={{ height: "auto", width: "auto" }}
-              className="img-fluid rounded-1"
-              src={VesuvioTramonto}
-              alt="Vesuvio"
-            />
-          </div>
-          <div class="col-lg-8 col-md-10 col-sm-11">
-            <div class="section-tittle text-center mb-2 pb-1">
-              <h1 className="mt-4" style={{ color: "black" }}>
-                Aues Eus
-              </h1>
-            </div>
-          </div>
+        <div
+          className="p-5 d-flex justify-content-start align-items-center text-center bg-image"
+          style={{
+            backgroundImage: `url(${aueseusvesuvio})`,
+            height: "60vh",
+          }}
+        >
+          <TitoloSezione
+            style={{ borderLeft: "2px solid white" }}
+            className="ml-5 pl-5"
+          >
+            <h1
+              className="mb-0"
+              style={{ color: "white", fontWeight: "bolder" }}
+            >
+              AUES EUS
+            </h1>
+          </TitoloSezione>
         </div>
         <CenteredDiv class="row align-items-center justify-content-center">
-          <div class="descrizioni col-xl-12 col-lg-5 col-md-10">
+          <Sezione class=" col-xl-12 col-lg-12 col-md-10">
             <div class="right-caption">
-              <div class="small-tittle col-12 d-flex flex-column">
-                <div class="col-xl-1 col-lg-7 col-md-10 d-flex justify-content-center p-0">
-                  <img
-                    style={{ height: "auto", width: "auto" }}
-                    className="img-fluid rounded-1"
-                    src={InternationalArtists}
-                    alt="Vesuvio"
-                  />
+              <div class="small-tittle  d-flex flex-column">
+                <div class="col-xl-12 col-lg-7 col-md-10 d-flex justify-content-center p-0 mt-5">
+                  <div className="col-xl-12 col-lg-6 col-md-3 d-flex flex-column justify-content-center text-center">
+                    <h3
+                      style={{
+                        fontStyle: "italic",
+                        color: "black",
+                        fontWeight: "bold",
+                      }}
+                      className="col-12"
+                    >
+                      BIMILLENNARIO DELLA NASCITA DI PLINIO IL VECCHIO (Como 23-
+                      Stabia 79)
+                    </h3>
+                    <h5
+                      style={{
+                        fontStyle: "italic",
+                        color: "black",
+                        fontWeight: "bold",
+                      }}
+                      className="col-12"
+                    >
+                      Quando la storia finisce …inizia la creatività
+                    </h5>
+                    <h2
+                      style={{
+                        fontStyle: "italic",
+                        color: "black",
+                        fontWeight: "bolder",
+                      }}
+                      className="col-12"
+                    >
+                      “Aues Eus. Vesuvio luce che brucia“
+                    </h2>
+                    <h2
+                      style={{
+                        fontStyle: "italic",
+                        color: "black",
+                      }}
+                      className="col-12"
+                    >
+                      Plinio intuisce/scolpisce il magma{" "}
+                    </h2>
+                  </div>
                 </div>
-                <Descrizione style={{ color: "black" }}>
-                  FREE INTERNATIONAL ARTISTS - il 25 aprile 2003 a Fontanelle di
-                  Roccabianca Parma tengono il 2.Meeting in cui il gruppo assume
-                  la denominazione “FREE INTERNATIONAL ARTISTS”. Negli anni
-                  successivi intensificano le attività e le penetrazioni negli
-                  ambienti culturali e costruiscono una rete internazionale di
-                  relazioni. La loro attività è a livello globale e agiscono
-                  come un’unica mente progettando eventi, simposi e meeting,
-                  allestendo mostre e tenendo conferenze. Danno impulso agli
-                  artisti di varie parti d’Italia e del mondo.
+                <Descrizione
+                  className="pt-5 col-12 px-0 text-center"
+                  style={{ color: "black" }}
+                >
+                  È un’incursione di Enzo Marino nell’animo e nell’esperienza
+                  trascendente di Gaius Plinius Secundus mentre lascia l’ "ager
+                  stabianus” per inoltrarsi nel mondo dell’Ade.
                 </Descrizione>
-                <Descrizione className="mt-1" style={{ color: "black" }}>
-                  Collaborano con critici della TrackerArt. Siglano protocolli
-                  di collaborazione con il Centro de Formaciòn y Ediciòn Grafica
-                  Buenos Aires Argentina e di partneriato con Austrian Visual
-                  Arts Association Styria Austria, con i Free International
-                  Artists India, con il team cammellieri del Raisar Oasis Desert
-                  (India) Rajastan. Collaborano con La Universidad Autonoma
-                  Metropolitana Unidad Iztapalapa Ciudad de México, con la
-                  London Biennale 2006, Istituto Polacco di Cultura di Berlin.
-                  Intrecciano rapporti con studiosi e critici d’arte come
-                  Francesco Piselli, Edith Risse, Milena Koren Božiček, Antonio
-                  Picariello, Adriana Molina Giuseppe Siano, Silvia Dayù, Ursula
-                  Brosch, Luigi Caramello, Francesco de Piscopo, ecc.
+                <Descrizione
+                  className="mt-1 text-center"
+                  style={{ color: "black" }}
+                >
+                  &lt;&lt; È la rievocazione/restauro degli ultimi pensieri di
+                  Plinio, mentre transita dal sopore, provocato dai gas del
+                  cratere, verso il regno delle ombre. Il desiderio estremo di
+                  comprendere il fenomeno eruttivo, che Plinio stava vivendo
+                  sulla sua pelle e a lui sconosciuto, si trasforma in un
+                  eccezionale prodigio che va oltre il sentire umano ma che fa
+                  ancora provare cose impercettibili ma stupefacenti. Plinio
+                  contesta duramente gli dei che gli hanno riservato una fine
+                  così poco onorevole, non solo come ammiraglio ma
+                  essenzialmente come uomo del discernimento e del libero
+                  pensiero e lo fa con tale veemenza da mettere in difficoltà le
+                  divinità. E così l’eterno buio, per volere divino, non avanza
+                  più ma rimane fermo per far vivere l’incanto di un tempo
+                  sospeso e permettere a Plinio di scoprire la realtà eruttiva.
+                  Enzo Marino, artista inquieto, annullando l’intervallo di
+                  duemila anni, s’insinua in questo mistero, ospita in se lo
+                  spirito di Plinio, acquisisce l’antica smania, attizza la sua
+                  follia e insieme scolpiscono il magma. È la compenetrazione di
+                  due personalità differenti, è la fusione di due esperienze
+                  estreme, è il legame tra due contesti dissimili eppure tanto
+                  vicini. È la continuità del modus operandi umano che fin dai
+                  tempi primigeni ha permesso all’uomo di ricercare “nell’antica
+                  memoria”, elaborare i ricordi, superare i suoi stessi
+                  traguardi e ricominciare così tutto daccapo. Semmai scavando
+                  nell’assurdo. In concreto è la smania dell’uomo di ieri e di
+                  oggi che non accetta le imposizioni, le prepotenze, le
+                  falsità, il comando assurdo, le decisioni altrui. E detesta la
+                  cieca obbedienza. Tutto questo sarà raccontato attraverso una
+                  performance multidisciplinare di gruppo in cui sarà realizzata
+                  la scultura performativa “scolpire il magma” come gesto
+                  allegorico della vogliadi libertà assoluta &gt;&gt;
                 </Descrizione>
-                <Descrizione className="mt-1" style={{ color: "black" }}>
-                  Partecipano a progetti internazionali come “La Ruta de
-                  Quetzalcoatl en el Arte” México e “Bluprint - Liverpool
-                  Independent Biennial”, MuseuMan Berlin. Sono presenti nei
-                  comitati scientifici del VI.Women`s International Conference
-                  2005 e dell’ “Incontro d’arte México-China” Olimpiadi di
-                  Pechino 2008; “Performance” 2006 - (Brighton Beach UK); “Art
-                  for The City Museum” 2006 (Faget, Romania); Centro de
-                  Formaciòn y Ediciòn Gràfica 2006 Buenos Aires, Argentina.
-                </Descrizione>
-
-                <div class="small-tittle col-xl-12 col-lg-7 col-md-10  d-flex justify-content-center p-0 mt-5">
-                  <ChiSiamoMembri />
+                <div className="col-12 d-flex justify-content-center mt-2">
+                  <img className="img-fluid col-8 rounded-3" src={cratere} />
                 </div>
               </div>
             </div>
-          </div>
+          </Sezione>
         </CenteredDiv>
-      </div>
-    </ChiSiamoSection>
+      </Container>
+    </PatrociniSection>
   );
 }

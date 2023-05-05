@@ -1,11 +1,35 @@
-import React, { useState } from "react";
+import React from "react";
 import VigamaMembri from "./VigamaMembri";
 import EnzoInfo from "./EnzoInfo";
-import Cratere from "./Immagini/Cratere.jpeg";
-import VesuvioTramonto from "./Immagini/tramonto2.jpeg";
-import InternationalArtists from "./Immagini/International Artists.jpeg";
+import chisiamovesuvio from "./Immagini/chisiamovesuvio1.png";
 
 import styled from "styled-components";
+
+const Container = styled.div`
+  margin: 0 !important;
+  padding: 0 !important;
+`;
+const Mask = styled.div`
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1);
+`;
+const TitoloSezione = styled.h1`
+  animation: slideInAndFade 1s ease-in-out;
+
+  @keyframes slideInAndFade {
+    from {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+`;
 
 const ChiSiamoSection = styled.section`
   font-size: 1rem !important;
@@ -34,11 +58,14 @@ const CenteredDiv = styled.div`
   }
 `;
 const Descrizione = styled.p`
-  font-size: 1rem !important;
+  font-size: 1.2rem !important;
 
   text-align: start;
   font-weight: bolder;
   margin-bottom: 30px;
+`;
+const Sezione = styled.div`
+  padding: 2rem 10rem 5rem 10rem;
 `;
 const Img = styled.img`
   height: auto;
@@ -48,41 +75,48 @@ const Img = styled.img`
 
 export default function ChiSiamo() {
   return (
-    <ChiSiamoSection
-      style={{
-        backgroundColor: "#181818",
-        paddingTop: "4rem",
-      }}
-    >
-      <div
-        class="container px-5 py-5 mt-5 rounded-5"
+    <ChiSiamoSection>
+      <Container
+        class=" py-5 mt-5 rounded-9"
         style={{ backgroundColor: "#f4f1ee" }}
       >
-        <div class="row justify-content-center align-items-center flex-column mx-5">
-          <div class="col-xl-2 col-lg-7 col-md-10 d-flex justify-content-center">
-            <img
-              style={{ height: "auto", width: "auto" }}
-              className="img-fluid rounded-6"
-              src={VesuvioTramonto}
-              alt="Vesuvio"
-            />
+        <Mask>
+          <div
+            className="p-5 d-flex justify-content-start align-items-center text-center bg-image"
+            style={{
+              backgroundImage: `url(${chisiamovesuvio})`,
+              height: "60vh",
+            }}
+          >
+            <TitoloSezione
+              style={{ borderLeft: "2px solid white" }}
+              className="ml-5 pl-5"
+            >
+              <h1
+                className="mb-0"
+                style={{ color: "white", fontWeight: "bolder" }}
+              >
+                Chi siamo
+              </h1>
+            </TitoloSezione>
           </div>
-        </div>
+        </Mask>
+
         <CenteredDiv class="row align-items-center justify-content-center">
-          <div class="descrizioni col-xl-12 col-lg-5 col-md-10">
+          <Sezione class=" col-xl-12 col-lg-12 col-md-10">
             <div class="right-caption">
               <div class="small-tittle col-12 d-flex flex-column">
                 <div class="col-xl-12 col-lg-7 col-md-10 d-flex justify-content-center p-0 mt-5">
-                  <div className="col-4">
-                    <Img
-                      style={{ height: "auto", width: "auto" }}
-                      className="img-fluid rounded-1"
-                      src={InternationalArtists}
-                      alt="Vesuvio"
-                    />
+                  <div className="col-xl-12 col-lg-6 col-md-3 d-flex justify-content-center">
+                    <h3
+                      className="text-center col-5 py-2 rounded-1"
+                      style={{ color: "white", backgroundColor: "#042881" }}
+                    >
+                      FREE INTERNATIONAL ARTISTS
+                    </h3>
                   </div>
                 </div>
-                <Descrizione style={{ color: "black" }}>
+                <Descrizione className="pt-4" style={{ color: "black" }}>
                   FREE INTERNATIONAL ARTISTS - il 25 aprile 2003 a Fontanelle di
                   Roccabianca Parma tengono il 2.Meeting in cui il gruppo assume
                   la denominazione “FREE INTERNATIONAL ARTISTS”. Negli anni
@@ -122,14 +156,14 @@ export default function ChiSiamo() {
                   <EnzoInfo />
                 </div>
 
-                <div class="small-tittle col-xl-12 col-lg-7 col-md-10  d-flex justify-content-center p-0 mt-5">
+                <div class="small-tittle col-xl-12 col-lg-12 col-md-12  d-flex justify-content-center p-0 mt-5">
                   <VigamaMembri />
                 </div>
               </div>
             </div>
-          </div>
+          </Sezione>
         </CenteredDiv>
-      </div>
+      </Container>
     </ChiSiamoSection>
   );
 }

@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Vesuvio from "./Immagini/Vesuvioo.jpeg";
 import "../Css/Jumbotron.css";
-import Carosello from "./Carosello";
-import { MDBBtn } from "mdb-react-ui-kit";
 import styled from "styled-components";
 
 const Data = styled.span`

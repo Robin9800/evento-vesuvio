@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import InternationalArtists from "./Immagini/International Artists.jpeg";
 import Parcovesuvio from "./Immagini/Parco Vesuvio.jpeg";
+import Napoli from "./Immagini/Napoli.png";
 import Vigama from "./Immagini/Vigama.jpeg";
 import Mav from "./Immagini/mav.jpeg";
 import {
@@ -33,6 +34,9 @@ const Navbar = styled(MDBNavbar)`
 
     a {
       color: white;
+      &:hover {
+        color: #ffde14;
+      }
     }
   }
 `;
@@ -164,7 +168,6 @@ const Ul = styled(MDBNavbarNav)`
 export default function Header() {
   const [showNav, setShowNav] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [loaded, setLoaded] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0 && !scrolled) {
@@ -185,11 +188,19 @@ export default function Header() {
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container fluid>
         <HeaderContainer>
-          <Img className="img-fluid my-1 mr-3" src={InternationalArtists} />
-          <Img className="img-fluid my-1 mr-3" src={Vigama} />
-          <Img className="img-fluid my-1 mr-3" src={Parcovesuvio} />
           <Img
-            className="img-fluid my-1"
+            className="img-fluid my-1 mr-3 rounded-1"
+            src={InternationalArtists}
+          />
+          <Img
+            className="img-fluid my-1 mr-3 rounded-1"
+            src={Napoli}
+            style={{ backgroundColor: "white" }}
+          />
+          <Img className="img-fluid my-1 mr-3 rounded-1" src={Vigama} />
+          <Img className="img-fluid my-1 mr-3 rounded-1" src={Parcovesuvio} />
+          <Img
+            className="img-fluid my-1 rounded-3"
             style={{ backgroundColor: "white" }}
             src={Mav}
           />
@@ -213,7 +224,7 @@ export default function Header() {
               <Link href="/chi-siamo">Chi siamo</Link>
             </Li>
             <Li>
-              <Link href="/aues-eus">Aeus Eus</Link>
+              <Link href="/aues-eus">Aues Eus</Link>
             </Li>
             <Li>
               <Link href="/patrocini">Patrocini</Link>
@@ -222,7 +233,7 @@ export default function Header() {
               <Link href="#">News</Link>
             </Li>
             <Li>
-              <Link href="#">Contatti</Link>
+              <Link href="/contatti">Contatti</Link>
             </Li>
           </Ul>
         </MDBCollapse>
