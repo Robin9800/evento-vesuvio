@@ -7,20 +7,18 @@ import Mav from "./Immagini/mav.jpeg";
 import {
   MDBContainer,
   MDBNavbar,
-  MDBNavbarBrand,
   MDBNavbarToggler,
   MDBNavbarNav,
   MDBNavbarItem,
   MDBNavbarLink,
-  MDBIcon,
   MDBCollapse,
+  MDBIcon,
 } from "mdb-react-ui-kit";
 import styled from "styled-components";
 
 const Navbar = styled(MDBNavbar)`
   padding: 1rem;
   background-color: transparent;
-  color: white;
   position: fixed;
   top: 0;
   left: 0;
@@ -45,18 +43,32 @@ const Navbar = styled(MDBNavbar)`
   .navbar-collapse {
     justify-content: flex-end;
     margin-top: 1rem;
+  }
+  /* Stile per schermi con larghezza inferiore a 576px */
+  @media (max-width: 575.98px) {
+    padding: 0.5rem 0 0 0;
+  }
 
-    &.show {
-      background-color: black;
-    }
+  /* Stile per schermi con larghezza compresa tra 576px e 768px */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+
+  /* Stile per schermi con larghezza compresa tra 768px e 902px */
+  @media (min-width: 768px) and (max-width: 902px) {
+  }
+
+  /* Stile per schermi con larghezza superiore a 903px */
+  @media (min-width: 902px) and (max-width: 1000px) {
   }
 `;
 
 const Hamburger = styled(MDBNavbarToggler)`
   color: white;
-`;
-const Ul = styled(MDBNavbarNav)`
-  justify-content: end;
+
+  /* Aggiunto questo stile */
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' width='30' height='30' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cspan class='sr-only'%3eToggle navigation%3c/span%3e%3cpath d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
 `;
 
 const Li = styled(MDBNavbarItem)`
@@ -107,8 +119,10 @@ const Li = styled(MDBNavbarItem)`
 const Link = styled(MDBNavbarLink)`
   text-decoration: none;
   color: white;
+  padding: 1em;
   font-size: 1.1em;
   position: relative;
+  white-space: nowrap; /* Aggiunto questa riga */
 
   &:hover {
     color: #ffde14;
@@ -131,11 +145,6 @@ const Link = styled(MDBNavbarLink)`
 
   &:hover::after {
     width: 100%;
-  }
-
-  /* Stile per schermi con larghezza compresa tra 576px e 768px */
-  @media (min-width: 992px) and (max-width: 1170px) {
-    font-size: 0.7rem;
   }
 `;
 const Img = styled.img`
@@ -253,6 +262,9 @@ const HeaderContainer = styled(MDBContainer)`
     width: 100%;
   }
 `;
+const Ul = styled(MDBNavbarNav)`
+  justify-content: end;
+`;
 
 export default function Header() {
   const [showNav, setShowNav] = useState(false);
@@ -275,47 +287,59 @@ export default function Header() {
   }, [scrolled]);
 
   return (
-    <Navbar expand="lg">
-      <MDBContainer fluid>
-        <MDBNavbarBrand>
-          <Img src={InternationalArtists} />
-          <Img style={{ backgroundColor: "white" }} src={Napoli} />
-          <Img src={Vigama} />
-          <Img src={Parcovesuvio} />
-          <Img src={Mav} />
-        </MDBNavbarBrand>
+    <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
+      <Container fluid>
+        <HeaderContainer>
+          <Img
+            className="img-fluid my-1 mr-3 rounded-1"
+            src={InternationalArtists}
+          />
+          <Img
+            className="img-fluid my-1 mr-3 rounded-1"
+            src={Napoli}
+            style={{ backgroundColor: "white" }}
+          />
+          <Img className="img-fluid my-1 mr-3 rounded-1" src={Vigama} />
+          <Img className="img-fluid my-1 mr-3 rounded-1" src={Parcovesuvio} />
+          <Img
+            className="img-fluid my-1 rounded-3"
+            style={{ backgroundColor: "white" }}
+            src={Mav}
+          />
+        </HeaderContainer>
         <Hamburger
+          type="button"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          onClick={() => setShowNavSecond(!showNavSecond)}
+          onClick={() => setShowNav(!showNav)}
         >
           <MDBIcon icon="bars" fas />
         </Hamburger>
-        <MDBCollapse navbar show={showNavSecond}>
+        <MDBCollapse navbar show={showNav}>
           <Ul>
-            <Link className="mx-2" href="/">
-              Home
-            </Link>
-            <Link className="mx-2" href="/chi-siamo">
-              Chi siamo
-            </Link>
-            <Link className="mx-2" href="/aues-eus">
-              Aues Eus
-            </Link>
-
-            <Link className="mx-2" href="/patrocini">
-              Patrocini
-            </Link>
-            <Link className="mx-2" href="#">
-              News
-            </Link>
-
-            <Link className="mx-2" href="/contatti">
-              Contatti
-            </Link>
+            <Li>
+              <Link active aria-current="page" href="/">
+                Home
+              </Link>
+            </Li>
+            <Li>
+              <Link href="/chi-siamo">Chi siamo</Link>
+            </Li>
+            <Li>
+              <Link href="/aues-eus">Aues Eus</Link>
+            </Li>
+            <Li>
+              <Link href="/patrocini">Patrocini</Link>
+            </Li>
+            <Li>
+              <Link href="#">News</Link>
+            </Li>
+            <Li>
+              <Link href="/contatti">Contatti</Link>
+            </Li>
           </Ul>
         </MDBCollapse>
-      </MDBContainer>
+      </Container>
     </Navbar>
   );
 }

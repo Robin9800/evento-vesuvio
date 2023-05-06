@@ -59,6 +59,17 @@ const CenteredDiv = styled.div`
 `;
 const Descrizione = styled.p`
   font-size: 1.2rem !important;
+  @media (max-width: 320px) {
+    text-align: center !important;
+    font-size 0.8rem !important;
+    margin-left: 0 !Important;
+  }
+  /* Stile per schermi con larghezza compresa tra 768px a 902px */
+  @media (min-width: 485px) and (max-width: 571px) {
+    text-align: center !important;
+    font-size 1.4rem !important;
+  } 
+  
 
   text-align: start;
   font-weight: bolder;
@@ -66,6 +77,16 @@ const Descrizione = styled.p`
 `;
 const Sezione = styled.div`
   padding: 2rem 10rem 5rem 10rem;
+  @media (max-width: 320px) {
+    padding: 0;
+    h3 {
+      font-size: 1rem;
+    }
+  }
+`;
+const SottotitoloSezione = styled.div`
+  @media (max-width: 320px) {
+  }
 `;
 const Img = styled.img`
   height: auto;
@@ -107,14 +128,14 @@ export default function ChiSiamo() {
             <div class="right-caption">
               <div class="small-tittle col-12 d-flex flex-column">
                 <div class="col-xl-12 col-lg-7 col-md-10 d-flex justify-content-center p-0 mt-5">
-                  <div className="col-xl-12 col-lg-6 col-md-3 d-flex justify-content-center">
+                  <SottotitoloSezione className="col-xl-12 col-lg-6 col-md-4 d-flex justify-content-center">
                     <h3
-                      className="text-center col-5 py-2 rounded-1"
+                      className="text-center col-xl-12 col-lg-12 col-md-12 py-2 rounded-1"
                       style={{ color: "white", backgroundColor: "#042881" }}
                     >
                       FREE INTERNATIONAL ARTISTS
                     </h3>
-                  </div>
+                  </SottotitoloSezione>
                 </div>
                 <Descrizione className="pt-4" style={{ color: "black" }}>
                   FREE INTERNATIONAL ARTISTS - il 25 aprile 2003 a Fontanelle di

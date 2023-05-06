@@ -17,6 +17,14 @@ const Data = styled.span`
       transform: translateY(0%);
     }
   }
+  @media (max-width: 320px) {
+    font-size: 1rem !important;
+    color: white;
+  }
+  /* Stile per schermi con larghezza compresa tra 768px a 902px */
+  @media (min-width: 487px) and (max-width: 767px) {
+    color: white;
+  }
 `;
 
 const Titolo = styled.div`
@@ -31,15 +39,25 @@ const Titolo = styled.div`
       margin-top: 10px;
     }
   }
-  /* Stile per schermi con larghezza compresa tra 768px a 902px */
-  @media (min-width: 768px) and (max-width: 902px) {
-    font-size: 3.5rem !important;
+  @media (max-width: 320px) {
+    text-align: center !important;
+    font-size 1rem !important;
+    margin-left: 0 !Important;
   }
-  /* Stile per schermi con larghezza superiore a 902px */
-  @media (min-width: 902px) {
-    margin-right: 25rem;
-
-    font-size: 3.5rem !important;
+  /* Stile per schermi con larghezza compresa tra 768px a 902px */
+  @media (min-width: 485px) and (max-width: 571px) {
+    text-align: center !important;
+    font-size 1.4rem !important;
+  } 
+  /* Stile per schermi con larghezza compresa tra 768px a 902px */
+  @media (min-width: 571px) and (max-width: 767px) {
+    text-align: center !important;
+    font-size 1.8rem !important;
+  } 
+  
+  /* Stile per schermi con larghezza compresa tra 576px e 768px */
+  @media (min-width: 767px) and (max-width: 1072px) {
+    font-size 2rem !important;
   }
   /* Stile per schermi con larghezza superiore a 1072px */
   @media (min-width: 1072px) {
@@ -48,6 +66,35 @@ const Titolo = styled.div`
 
     font-size: 2.8rem !important;
     font-weight: bolder;
+  }
+`;
+const Em = styled.em`
+  /* Stile per schermi con larghezza inferiore a 1072px */
+  @media (max-width: 320px) {
+    text-align: center !important;
+    font-size: 1rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  /* Stile per schermi con larghezza compresa tra572px */
+  min-width: 487px) and (max-width: 572px) {
+    text-align: center !important;
+    font-size: 1rem !important;
+  }
+`;
+const DivData = styled.div`
+  @media (max-width: 320px) {
+    align-self: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: red !important;
+  }
+  /* Stile per schermi con larghezza compresa tra 487px a 767px */
+  @media (min-width: 487px) and (max-width: 767px) {
+    align-self: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: red !important;
   }
 `;
 
@@ -60,6 +107,19 @@ const ContainerTitolo = styled.div`
   width: 100%;
   position: relative;
   top: 0;
+
+  @media (max-width: 320px) {
+    display: flex !important;
+    justify-content: center !important;
+    margin-left: 0;
+    margin-top: 12rem;
+  }
+  /* Stile per schermi con larghezza compresa tra 768px a 902px */
+  @media (min-width: 487px) and (max-width: 767px) {
+    display: flex !important;
+    justify-content: center !important;
+    margin-left: 0;
+  }
 `;
 
 const Descrizione = styled.p`
@@ -81,6 +141,10 @@ const Descrizione = styled.p`
       opacity: 1;
       transform: translateY(0);
     }
+  }
+  @media (max-width: 767px) {
+    font-size: 0.7rem !important;
+    margin-bottom: 3rem; !important;
   }
 `;
 
@@ -113,12 +177,12 @@ const Jumbotron = ({ onCarouselClick }) => {
               <Titolo style={{ marginBottom: "0" }}>
                 VESUVIO LUCE CHE BRUCIA
               </Titolo>
-              <em style={{ fontSize: "2rem", color: "#e08126" }}>
+              <Em style={{ fontSize: "2rem", color: "#e08126" }}>
                 Plinio il vecchio intuisce/scolpisce il magma
-              </em>
+              </Em>
             </div>
           </ContainerTitolo>
-          <div className="d-flex flex-column align-self-end  mr-5 pr-3">
+          <DivData className="d-flex flex-column align-self-end  mr-5 pr-3">
             <Data className="font-italic" style={{ width: "275px" }}>
               Città Metropolitana di Napoli Italia Parco del Vesuvio c/o Gran
               Cono
@@ -126,7 +190,7 @@ const Jumbotron = ({ onCarouselClick }) => {
             <Data className="font-italic">
               <i class="fa-solid fa-location-dot"></i> 16 maggio 2023 h. 9:30
             </Data>
-          </div>
+          </DivData>
           <Descrizione>
             È un’ incursione di Enzo Marino nell’animo e nell’esperienza
             trascendente di Gaius Plinius Secundus mentre lascia l’"ager

@@ -102,7 +102,7 @@ function EnzoInfo() {
       <SpeakerColumn>
         <div className="d-flex justify-content-center flex-column mx-5">
           <div class="col-xl-12 col-lg-7 col-md-10 d-flex justify-content-center p-0">
-            <div className="col-4">
+            <div className="col-4 col-md-12">
               <Img
                 style={{ height: "auto", width: "auto" }}
                 className="img-fluid rounded-1"
