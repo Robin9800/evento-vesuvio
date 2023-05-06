@@ -261,7 +261,7 @@ export default function Header() {
             <Link className="mx-2" href="/patrocini">
               Patrocini
             </Link>
-            <Link className="mx-2" href="#">
+            <Link className="mx-2" href="/news">
               News
             </Link>
 

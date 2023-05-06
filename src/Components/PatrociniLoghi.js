@@ -6,12 +6,17 @@ import Mav from "./Immagini/mav.jpeg";
 
 const SpeakerWrapper = styled.div`
   display: flex;
+  flex-wrap: wrap; /* aggiunta della proprietà flex-wrap */
+
+  @media screen and (max-width: 770px) {
+    flex-direction: column;
+  }
 `;
 
 const SpeakerColumn = styled.div`
   margin: 0 10px 30px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 770px) {
     flex-basis: calc(100% - 20px);
   }
 `;
@@ -26,7 +31,7 @@ const SpeakerImage = styled.img`
 
 const PatrocinioSection = styled.div`
   transition: transform 0.2s ease-out;
-  margin: 0 auto; /* aggiunta della proprietà margin */
+  margin: 0 auto 40px auto; /* aggiunta della proprietà margin */
 
   &:hover {
     transform: scale(1.05);

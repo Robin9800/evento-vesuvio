@@ -4,6 +4,7 @@ import Jumbotron from "./Components/Jumbotron";
 import ChiSiamo from "./Components/ChiSiamo";
 import AuesEus from "./Components/AuesEus";
 import Patrocini from "./Components/Patrocini";
+import News from "./Components/News";
 import Contatti from "./Components/Contatti";
 
 import Footer from "./Components/Footer";
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/chi-siamo" component={ChiSiamo} />
         <Route path="/aues-eus" component={AuesEus} />
         <Route path="/patrocini" component={Patrocini} />
+        <Route path="/news" component={News} />
         <Route path="/contatti" component={Contatti} />
       </Switch>
       <Footer />

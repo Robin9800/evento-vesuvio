@@ -89,6 +89,11 @@ const JobTittle = styled.div`
       font-weight: 600;
     }
   }
+  @media (max-width: 320px) {
+    p {
+      font-size: 0.3rem !important;
+    }
+  }
   @media (max-width: 400px) {
     p {
       font-size: 0.5rem !important;
@@ -96,7 +101,7 @@ const JobTittle = styled.div`
   }
   @media (max-width: 650px) {
     p {
-      font-size: 0.8rem !important;
+      font-size: 0.6rem !important;
     }
   }
 `;
@@ -117,7 +122,7 @@ function VigamaMembri() {
         <div class=" d-flex justify-content-center p-0 mt-5">
           <div className="col-xl-12 col-lg-12 col-md-12 d-flex justify-content-center">
             <h3
-              className="text-center col-4 py-2 rounded-1"
+              className="text-center col-7 py-2 rounded-1"
               style={{ color: "white", backgroundColor: "#042881" }}
             >
               VI.GA.MA GROUP

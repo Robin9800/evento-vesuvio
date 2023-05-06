@@ -74,9 +74,6 @@ const Sezione = styled.div`
       font-size: 0.95rem;
     }
   }
-  /* Stile per schermi con larghezza compresa tra 768px a 902px */
-  @media (min-width: 487px) and (max-width: 767px) {
-  }
 `;
 const ContainerB = styled.div`
   margin: 0;

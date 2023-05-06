@@ -1,5 +1,5 @@
 import React from "react";
-import aueseusvesuvio from "./Immagini/aueseusvesuvio.png";
+import newsvesuvio from "./Immagini/newsvesuvio.png";
 
 import styled from "styled-components";
 
@@ -86,7 +86,7 @@ export default function Contatti() {
         <div
           className="p-5 d-flex justify-content-start align-items-center text-center bg-image"
           style={{
-            backgroundImage: `url(${aueseusvesuvio})`,
+            backgroundImage: `url(${newsvesuvio})`,
             height: "60vh",
           }}
         >
@@ -98,7 +98,7 @@ export default function Contatti() {
               className="mb-0"
               style={{ color: "white", fontWeight: "bolder" }}
             >
-              Contatti
+              News
             </h1>
           </TitoloSezione>
         </div>
@@ -108,84 +108,15 @@ export default function Contatti() {
               <div class="small-tittle d-flex flex-column">
                 <div class=" d-flex justify-content-center p-0">
                   <div className=" d-flex flex-column justify-content-center text-center">
-                    <h2
+                    <h1
                       style={{
                         color: "black",
                         fontWeight: "bold",
                       }}
                       className="col-12"
                     >
-                      FREE INTERNATIONAL ARTISTS:
-                    </h2>
-                    <h5
-                      style={{
-                        fontStyle: "italic",
-                        color: "black",
-                        fontWeight: "bold",
-                      }}
-                      className="col-12"
-                    >
-                      T +39 3465064978
-                    </h5>
-                    <h5
-                      style={{
-                        fontStyle: "italic",
-                        color: "black",
-                        fontWeight: "bold",
-                      }}
-                      className="col-12"
-                    >
-                      e-mail: marinoenzo@yahoo.it - www.marinoenzo.com
-                    </h5>
-                    <h5
-                      style={{
-                        fontStyle: "italic",
-                        color: "black",
-                        fontWeight: "bold",
-                      }}
-                      className="col-12"
-                    >
-                      PEC: enzomarino.freeinternationalartists@pec.it
-                    </h5>
-                    <h2
-                      style={{
-                        color: "black",
-                        fontWeight: "bolder",
-                      }}
-                      className="col-12 mt-3"
-                    >
-                      VI.GA.MA Group
-                    </h2>
-                    <h5
-                      style={{
-                        fontStyle: "italic",
-                        color: "black",
-                        fontWeight: "bold",
-                      }}
-                      className="col-12"
-                    >
-                      Prof. Redenta Vitulano
-                    </h5>
-                    <h5
-                      style={{
-                        fontStyle: "italic",
-                        color: "black",
-                        fontWeight: "bold",
-                      }}
-                      className="col-12"
-                    >
-                      T +39 3385972849
-                    </h5>
-                    <h5
-                      style={{
-                        fontStyle: "italic",
-                        color: "black",
-                        fontWeight: "bold",
-                      }}
-                      className="col-12"
-                    >
-                      e-mail: redentavitulano65@gmail.com
-                    </h5>
+                      IN ARRIVO
+                    </h1>
                   </div>
                 </div>
               </div>
