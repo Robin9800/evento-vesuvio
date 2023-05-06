@@ -41,68 +41,42 @@ const SpeakerCaption = styled.figcaption`
     margin-bottom: 30px;
     color: #868g99;
   }
+  @media (min-width: 485px) and (max-width: 571px) {
+    text-align: center !important;
+    font-size 1.4rem !important;
+    margin-left: 0 !Important;
 
-  ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  } 
+  @media (max-width: 350px) {
+    h3{
+      textalign: center;
 
-    li {
-      margin-right: 20px;
+      font-size 1rem !important;
 
-      &:last-child {
-        margin-right: 0;
-      }
-
-      a {
-        display: block;
-        width: 36px;
-        height: 36px;
-        line-height: 36px;
-        text-align: center;
-        font-size: 18px;
-        color: #fff;
-        border-radius: 50%;
-        transition: transform 0.2s ease-out;
-
-        &:hover {
-          transform: translateY(-3px);
-        }
-
-        &:focus {
-          outline: none;
-          box-shadow: 0 0 0 2px #ffc107;
-        }
-      }
-
-      .fab {
-        font-size: 18px;
-      }
-
-      .fa-twitter {
-        background-color: #1da1f2;
-      }
-
-      .fa-linkedin {
-        background-color: #0077b5;
-      }
-
-      .fa-github {
-        background-color: #333;
-      }
     }
-  }
+    p{
+      font-size: 0.6rem !important;
+    }
+  } 
+  @media (max-width: 500px) {
+    h3{
+      textalign: center;
+      font-size 1.2rem !important;
+
+    }
+    p{
+      font-size: 0.8rem !important;
+    }
+  } 
 `;
 
 function EnzoInfo() {
   return (
     <SpeakerWrapper>
       <SpeakerColumn>
-        <div className="d-flex justify-content-center flex-column mx-5">
-          <div class="col-xl-12 col-lg-7 col-md-10 d-flex justify-content-center p-0">
-            <div className="col-4 col-md-12">
+        <div className="d-flex justify-content-center flex-column mx-3">
+          <div class=" d-flex justify-content-center p-0">
+            <div className="col-xl-4 col-lg-6 col-md-8 ">
               <Img
                 style={{ height: "auto", width: "auto" }}
                 className="img-fluid rounded-1"

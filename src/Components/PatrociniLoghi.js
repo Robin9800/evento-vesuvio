@@ -114,7 +114,7 @@ const SpeakerCaption = styled.figcaption`
 function PatrociniLoghi() {
   return (
     <SpeakerWrapper>
-      <SpeakerColumn className="d-flex">
+      <SpeakerColumn className="justify-content-center">
         <PatrocinioSection className="d-flex flex-column mx-5">
           <a
             href="https://www.cittametropolitana.na.it/"

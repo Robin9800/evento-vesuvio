@@ -17,12 +17,15 @@ const Data = styled.span`
       transform: translateY(0%);
     }
   }
-  @media (max-width: 320px) {
+  @media (max-width: 487px) {
     font-size: 1rem !important;
     color: white;
   }
   /* Stile per schermi con larghezza compresa tra 768px a 902px */
   @media (min-width: 487px) and (max-width: 767px) {
+    color: white;
+  }
+  @media (min-width: 767px) and (max-width: 1072px) {
     color: white;
   }
 `;
@@ -39,7 +42,7 @@ const Titolo = styled.div`
       margin-top: 10px;
     }
   }
-  @media (max-width: 320px) {
+  @media (max-width: 487px) {
     text-align: center !important;
     font-size 1rem !important;
     margin-left: 0 !Important;
@@ -70,20 +73,20 @@ const Titolo = styled.div`
 `;
 const Em = styled.em`
   /* Stile per schermi con larghezza inferiore a 1072px */
-  @media (max-width: 320px) {
+  @media (max-width: 487px) {
     text-align: center !important;
     font-size: 1rem !important;
     margin: 0 !important;
     padding: 0 !important;
   }
   /* Stile per schermi con larghezza compresa tra572px */
-  min-width: 487px) and (max-width: 572px) {
+  min-width: 486px) and (max-width: 572px) {
     text-align: center !important;
-    font-size: 1rem !important;
+    font-size: 0.5rem !important;
   }
 `;
 const DivData = styled.div`
-  @media (max-width: 320px) {
+  @media (max-width: 487px) {
     align-self: center !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -108,7 +111,7 @@ const ContainerTitolo = styled.div`
   position: relative;
   top: 0;
 
-  @media (max-width: 320px) {
+  @media (max-width: 487px) {
     display: flex !important;
     justify-content: center !important;
     margin-left: 0;

@@ -29,6 +29,7 @@ const CenteredDiv = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 
   .container-imamgine-descrizione {
     padding-right: 0;
@@ -78,11 +79,11 @@ export default function Patrocini() {
             </h1>
           </TitoloSezione>
         </div>
-        <CenteredDiv class="row align-items-center justify-content-center">
-          <div class="descrizioni col-xl-12 col-lg-5 col-md-10">
+        <CenteredDiv class="row d-flex align-items-center justify-content-center">
+          <div class="descrizioni">
             <div class="right-caption">
-              <div class="small-tittle col-12 d-flex flex-column">
-                <div class="small-tittle col-xl-12 col-lg-7 col-md-10  d-flex justify-content-center p-0 my-5">
+              <div class="small-tittle d-flex flex-column">
+                <div class="small-tittle  d-flex justify-content-center p-0 my-5">
                   <PatrociniLoghi />
                 </div>
               </div>

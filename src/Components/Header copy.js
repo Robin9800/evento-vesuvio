@@ -64,11 +64,6 @@ const Navbar = styled(MDBNavbar)`
 
 const Hamburger = styled(MDBNavbarToggler)`
   color: white;
-
-  /* Aggiunto questo stile */
-  .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' width='30' height='30' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cspan class='sr-only'%3eToggle navigation%3c/span%3e%3cpath d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  }
 `;
 
 const Li = styled(MDBNavbarItem)`
