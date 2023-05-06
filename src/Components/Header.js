@@ -48,22 +48,42 @@ const Li = styled(MDBNavbarItem)`
   margin-left: 20px;
   /* Stile per schermi con larghezza inferiore a 576px */
   @media (max-width: 575.98px) {
+    font-size: calc(
+      18px * 0.6
+    ); /* diminuisce del 40% rispetto alla dimensione di base */
+    max-width: 100% !important;
+    height: auto !important;
+    margin-bottom: 10px;
   }
 
   /* Stile per schermi con larghezza compresa tra 576px e 768px */
   @media (min-width: 576px) and (max-width: 767.98px) {
+    font-size: calc(
+      18px * 0.7
+    ); /* diminuisce del 30% rispetto alla dimensione di base */
     max-width: 50% !important;
     height: auto !important;
   }
 
   /* Stile per schermi con larghezza compresa tra 768px e 902px */
   @media (min-width: 768px) and (max-width: 902px) {
+    font-size: calc(
+      18px * 0.8
+    ); /* diminuisce del 20% rispetto alla dimensione di base */
     max-width: 40% !important;
     height: auto !important;
   }
 
+  @media (min-width: 902px) and (max-width: 1024px) {
+    margin-right: 0;
+    margin-left: 0;
+    .container-fluid {
+      margin: 0 !important;
+    }
+  }
   /* Stile per schermi con larghezza superiore a 903px */
-  @media (min-width: 903px) {
+  @media (min-width: 1024px) {
+    font-size: 18px; /* dimensione del testo di base */
     max-width: 50%;
     height: auto;
   }
@@ -74,6 +94,7 @@ const Link = styled(MDBNavbarLink)`
   padding: 1em;
   font-size: 1.1em;
   position: relative;
+  white-space: nowrap; /* Aggiunto questa riga */
 
   &:hover {
     color: #ffde14;
@@ -102,6 +123,7 @@ const Img = styled.img`
   height: 45px !important;
   object-fit: cover;
   animation: slideInAndFade 1s ease-in-out;
+  width: 20%;
 
   @keyframes slideInAndFade {
     from {
@@ -113,24 +135,35 @@ const Img = styled.img`
       transform: translateY(0%);
     }
   }
+
   /* Stile per schermi con larghezza inferiore a 576px */
   @media (max-width: 575.98px) {
     max-width: 60% !important;
+    width: 30%;
   }
 
   /* Stile per schermi con larghezza compresa tra 576px e 768px */
   @media (min-width: 576px) and (max-width: 767.98px) {
     max-width: 50%;
+    width: 25%;
   }
 
   /* Stile per schermi con larghezza compresa tra 768px e 902px */
   @media (min-width: 768px) and (max-width: 902px) {
     max-width: 40% !important;
+    width: 20%;
   }
 
   /* Stile per schermi con larghezza superiore a 903px */
-  @media (min-width: 903px) {
+  @media (min-width: 903px) and (max-width: 1440px) {
     max-width: 50%;
+    width: 25%;
+  }
+
+  /* Stile per schermi con larghezza superiore a 1440px */
+  @media (min-width: 1441px) {
+    max-width: 30%;
+    width: 15%;
   }
 `;
 const Container = styled(MDBContainer)`
@@ -141,6 +174,9 @@ const HeaderContainer = styled(MDBContainer)`
   margin-right: 20px;
   margin-left: 20px;
   width: 45%;
+  display: flex;
+  flex-wrap: nowrap;
+
   /* Stile per schermi con larghezza inferiore a 576px */
   @media (max-width: 575.98px) {
     width: 100%;
