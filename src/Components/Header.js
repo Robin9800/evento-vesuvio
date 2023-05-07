@@ -94,19 +94,43 @@ const Link = styled(MDBNavbarLink)`
   }
 `;
 const Img = styled.img`
-  height: 45px;
-  animation: slideInAndFade 1s ease-in-out;
-  width: 100%;
+  height: 50px;
+  width: auto;
+  margin: 0 10px;
+  opacity: 1;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 
-  @keyframes slideInAndFade {
+  @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(100%);
+      visibility: hidden;
     }
     to {
       opacity: 1;
-      transform: translateY(0%);
+      visibility: visible;
     }
+  }
+
+  &:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+
+  &:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+
+  &:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+
+  &:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+
+  &:nth-child(5) {
+    transition-delay: 0.5s;
   }
 
   /* Stile per schermi con larghezza inferiore a 390px */
@@ -143,76 +167,11 @@ const Img = styled.img`
     height: 45px;
   }
 `;
-const Container = styled(MDBContainer)`
-  margin-right: 20px;
-  margin-left: 20px;
-  /* Stile per schermi con larghezza inferiore a 390px */
-  @media (max-width: 390px) {
-    display: flex;
-    
-  }
-  /* Stile per schermi con larghezza inferiore a 576px */
-
-  }
-  /* Stile per schermi con larghezza inferiore a 576px */
-  @media (max-width: 575.98px) {
-    margin: 0 10px 0 10px;
-  }
-
-  /* Stile per schermi con larghezza compresa tra 576px e 768px */
-  @media (min-width: 576px) and (max-width: 767.98px) {
-  }
-
-  /* Stile per schermi con larghezza compresa tra 768px e 902px */
-  @media (min-width: 768px) and (max-width: 902px) {
-  }
-
-  /* Stile per schermi con larghezza superiore a 903px */
-  @media (min-width: 902px) and (max-width: 1000px) {
-  }
-`;
-const HeaderContainer = styled(MDBContainer)`
-  margin-right: 20px;
-  margin-left: 20px;
-  width: 45%;
-  display: flex;
-  flex-wrap: nowrap;
-
-  @media (max-width: 400px) {
-    .navbar-nav > .nav-item:not(:first-child) {
-      display: none;
-    }
-    .navbar-brand {
-      display: block !important;
-      width: 100%;
-      text-align: center;
-    }
-  }
-  /* Stile per schermi con larghezza inferiore a 576px */
-  @media (max-width: 575.98px) {
-    width: 20%;
-  }
-
-  /* Stile per schermi con larghezza compresa tra 576px e 768px */
-  @media (min-width: 576px) and (max-width: 767.98px) {
-    width: 60%;
-  }
-
-  /* Stile per schermi con larghezza compresa tra 768px e 902px */
-  @media (min-width: 768px) and (max-width: 902px) {
-    width: 80%;
-  }
-
-  /* Stile per schermi con larghezza superiore a 903px */
-  @media (min-width: 902px) and (max-width: 1000px) {
-    width: 100%;
-  }
-`;
 
 export default function Header() {
-  const [showNav, setShowNav] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showNavSecond, setShowNavSecond] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0 && !scrolled) {
@@ -234,10 +193,10 @@ export default function Header() {
       <MDBContainer fluid>
         <MDBNavbarBrand>
           <Img src={InternationalArtists} />
-          <Img style={{ backgroundColor: "white" }} src={Napoli} />
-          <Img src={Vigama} />
           <Img src={Parcovesuvio} />
           <Img src={Mav} />
+          <Img style={{ backgroundColor: "white" }} src={Napoli} />
+          <Img src={Vigama} />
         </MDBNavbarBrand>
         <Hamburger
           aria-expanded="false"

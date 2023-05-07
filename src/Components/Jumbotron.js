@@ -4,7 +4,9 @@ import "../Css/Jumbotron.css";
 import styled from "styled-components";
 
 const Data = styled.span`
-  color: #e08126;
+  a {
+    color: rgb(255 125 0);
+  }
   animation: slideInAndFade 1s ease-in-out;
 
   @keyframes slideInAndFade {
@@ -149,9 +151,19 @@ const Descrizione = styled.p`
     font-size: 0.7rem !important;
     margin-bottom: 3rem; !important;
   }
+  @media (min-width: 1024px) {
+   font-size: 1.2rem !important;
+  }
 `;
 
 const Jumbotron = ({ onCarouselClick }) => {
+  const link = [
+    {
+      id: 1,
+      url: "https://www.google.com/maps/dir//Citt%C3%A0+Metropolitana+di+Napoli+Italia+Parco+del+Vesuvio+c%2Fo+Gran+Cono/@40.8530485,14.2340841,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x133ba5a88df693a1:0x1f053535459784cf!2m2!1d14.4258522!2d40.8281756",
+      title: "Parco vesuvio",
+    },
+  ];
   const [showCarousel, setShowCarousel] = useState(false);
 
   const handleCarouselClick = () => {
@@ -176,7 +188,7 @@ const Jumbotron = ({ onCarouselClick }) => {
         <div className=" d-flex justify-content-around flex-column align-items-center h-100">
           <ContainerTitolo className="text-white d-flex justify-content-between">
             <div className="d-flex flex-column">
-              <Titolo>AUES EUS,</Titolo>
+              <Titolo>AUES EUS</Titolo>
               <Titolo style={{ marginBottom: "0" }}>
                 VESUVIO LUCE CHE BRUCIA
               </Titolo>
@@ -187,11 +199,13 @@ const Jumbotron = ({ onCarouselClick }) => {
           </ContainerTitolo>
           <DivData className="d-flex flex-column align-self-end  mr-5 pr-3">
             <Data className="font-italic" style={{ width: "275px" }}>
-              Città Metropolitana di Napoli Italia Parco del Vesuvio c/o Gran
-              Cono
+              <a target="_blank" rel="noopener noreferrer" href={link[0].url}>
+                <i class="fa-solid fa-location-dot"></i> Città Metropolitana di
+                Napoli Italia Parco del Vesuvio c/o Gran Cono
+              </a>
             </Data>
-            <Data className="font-italic">
-              <i class="fa-solid fa-location-dot"></i> 16 maggio 2023 h. 9:30
+            <Data className="font-italic" style={{ color: "white" }}>
+              16 maggio 2023 h. 9:30
             </Data>
           </DivData>
           <Descrizione>

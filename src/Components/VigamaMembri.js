@@ -122,7 +122,7 @@ function VigamaMembri() {
         <div class=" d-flex justify-content-center p-0 mt-5">
           <div className="col-xl-12 col-lg-12 col-md-12 d-flex justify-content-center">
             <h3
-              className="text-center col-7 py-2 rounded-1"
+              className="text-center col-xl-4 col-lg-4 col-md-4 py-2 rounded-1"
               style={{ color: "white", backgroundColor: "#042881" }}
             >
               VI.GA.MA GROUP

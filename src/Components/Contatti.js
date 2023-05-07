@@ -135,7 +135,14 @@ export default function Contatti() {
                       }}
                       className="col-12"
                     >
-                      e-mail: marinoenzo@yahoo.it - www.marinoenzo.com
+                      e-mail: marinoenzo@yahoo.it -{" "}
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.marinoenzo.com/"
+                      >
+                        www.marinoenzo.com
+                      </a>
                     </h5>
                     <h5
                       style={{
@@ -164,7 +171,7 @@ export default function Contatti() {
                       }}
                       className="col-12"
                     >
-                      Prof. Redenta Vitulano
+                      ----- Prof. Redenta Vitulano -----
                     </h5>
                     <h5
                       style={{
