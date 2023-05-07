@@ -18,10 +18,12 @@ import {
 import styled from "styled-components";
 
 const Navbar = styled(MDBNavbar)`
-  padding: 1rem;
-  background-color: transparent;
+  background-color: ${({ bgColor }) =>
+    bgColor ||
+    "transparent"}; /* set background color based on passed prop or default to transparent */
   color: white;
   position: fixed;
+  padding: 1rem 0;
   top: 0;
   left: 0;
   right: 0;
@@ -31,7 +33,7 @@ const Navbar = styled(MDBNavbar)`
 
   &.scrolled {
     background-color: #852211;
-    padding: 0.5rem;
+    padding: 0.4rem 0;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
 
     a {
@@ -45,10 +47,11 @@ const Navbar = styled(MDBNavbar)`
   .navbar-collapse {
     justify-content: flex-end;
     margin-top: 1rem;
+    background-color: #852211;
+  }
 
-    &.show {
-      background-color: black;
-    }
+  /* Stile per schermi con larghezza inferiore a 390px */
+  @media (max-width: 992px) {
   }
 `;
 
@@ -94,9 +97,8 @@ const Link = styled(MDBNavbarLink)`
   }
 `;
 const Img = styled.img`
-  height: 50px;
   width: auto;
-  margin: 0 10px;
+  margin: 0 6px;
   opacity: 1;
   animation-name: fadeIn;
   animation-duration: 1s;
@@ -164,10 +166,14 @@ const Img = styled.img`
 
   /* Stile per schermi con larghezza superiore a 1440px */
   @media (min-width: 1441px) {
-    height: 45px;
+    height: 50px;
   }
 `;
-
+const NavbarToggle = styled(MDBNavbarToggler)`
+  border-color: ${({ bgColor }) =>
+    bgColor ||
+    "white"}; /* set border color based on passed prop or default to white */
+`;
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [showNavSecond, setShowNavSecond] = useState(false);
@@ -205,29 +211,27 @@ export default function Header() {
         >
           <MDBIcon icon="bars" fas />
         </Hamburger>
-        <MDBCollapse navbar show={showNavSecond}>
-          <Ul>
-            <Link className="mx-2" href="/">
-              Home
-            </Link>
-            <Link className="mx-2" href="/chi-siamo">
-              Chi siamo
-            </Link>
-            <Link className="mx-2" href="/aues-eus">
-              Aues Eus
-            </Link>
+        <MDBCollapse className="mt-0" navbar show={showNavSecond}>
+          <Link className="mx-2" href="/">
+            Home
+          </Link>
+          <Link className="mx-2" href="/chi-siamo">
+            Chi siamo
+          </Link>
+          <Link className="mx-2" href="/aues-eus">
+            Aues Eus
+          </Link>
 
-            <Link className="mx-2" href="/patrocini">
-              Patrocini
-            </Link>
-            <Link className="mx-2" href="/news">
-              News
-            </Link>
+          <Link className="mx-2" href="/patrocini">
+            Patrocini
+          </Link>
+          <Link className="mx-2" href="/news">
+            News
+          </Link>
 
-            <Link className="mx-2" href="/contatti">
-              Contatti
-            </Link>
-          </Ul>
+          <Link className="mx-2" href="/contatti">
+            Contatti
+          </Link>
         </MDBCollapse>
       </MDBContainer>
     </Navbar>
