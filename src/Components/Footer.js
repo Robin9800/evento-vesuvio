@@ -30,7 +30,9 @@ export default function App() {
   return (
     <FooterContainer>
       <FooterContent>
-        <FooterText>© 2023 Free International Artists</FooterText>
+        <FooterText translate="no">
+          © 2023 Free International Artists
+        </FooterText>
       </FooterContent>
     </FooterContainer>
   );
