@@ -212,7 +212,7 @@ export default function Header() {
           <MDBIcon icon="bars" fas />
         </Hamburger>
         <MDBCollapse className="mt-0" navbar show={showNavSecond}>
-          <Link className="mx-2" href="/">
+          <Link translate="no" className="mx-2" href="/">
             Home
           </Link>
           <Link className="mx-2" href="/chi-siamo">
@@ -225,7 +225,7 @@ export default function Header() {
           <Link className="mx-2" href="/patrocini">
             Patrocini
           </Link>
-          <Link className="mx-2" href="/news">
+          <Link translate="no" className="mx-2" href="/news">
             News
           </Link>
 

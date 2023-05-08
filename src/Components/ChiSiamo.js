@@ -119,7 +119,6 @@ export default function ChiSiamo() {
               className="ml-5 pl-5"
             >
               <h1
-                translate="no"
                 className="mb-0"
                 style={{ color: "white", fontWeight: "bolder" }}
               >
@@ -137,6 +136,7 @@ export default function ChiSiamo() {
                   <div class="d-flex justify-content-center p-0 mt-5">
                     <SottotitoloSezione className="col-xl-12 col-lg-12 col-md-12 d-flex justify-content-center">
                       <h3
+                        translate="no"
                         className="text-center col-xl-6 col-lg-7 col-md-10 py-2 rounded-1"
                         style={{ color: "white", backgroundColor: "#042881" }}
                       >

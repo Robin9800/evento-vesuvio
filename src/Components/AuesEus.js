@@ -122,7 +122,7 @@ export default function Patrocini() {
               <h2 className="text-center">
                 PRIMA LETTERA DI PLINIO IL GIOVANE A TACITO
               </h2>
-              <p>
+              <p className="pt-4">
                 "Mio zio si trovava a Miseno dove comandava la flotta. Il 24
                 agosto, nel primo pomeriggio, mia madre attirò la sua attenzione
                 su una nube di straordinaria forma e grandezza. Egli aveva fatto
