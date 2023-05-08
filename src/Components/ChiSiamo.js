@@ -119,6 +119,7 @@ export default function ChiSiamo() {
               className="ml-5 pl-5"
             >
               <h1
+                translate="no"
                 className="mb-0"
                 style={{ color: "white", fontWeight: "bolder" }}
               >
