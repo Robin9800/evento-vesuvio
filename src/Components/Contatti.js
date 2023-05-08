@@ -109,6 +109,7 @@ export default function Contatti() {
                 <div class=" d-flex justify-content-center p-0">
                   <div className=" d-flex flex-column justify-content-center text-center">
                     <h2
+                      translate="no"
                       style={{
                         color: "black",
                         fontWeight: "bold",
@@ -155,6 +156,7 @@ export default function Contatti() {
                       PEC: enzomarino.freeinternationalartists@pec.it
                     </h5>
                     <h2
+                      translate="no"
                       style={{
                         color: "black",
                         fontWeight: "bolder",
