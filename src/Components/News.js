@@ -64,23 +64,23 @@ export default function Contatti() {
             </h1>
           </TitoloSezione>
         </div>
-        <DivGiornali className="d-flex justify-content-between px-5 py-5">
+        <DivGiornali className="d-flex justify-content-between  py-5">
           <NewsCard
-            className="mx-3 my-3"
+            className=" my-3"
             date="09/05/2023"
             text="Al museo archeologico di Ercolano il progetto di Enzo Marino per il bimillenario dalla nascita di Plinio il vecchio"
             image={Mattino}
             url="https://bit.ly/3LSB0rg"
           />
           <NewsCard
-            className="mx-3 my-3"
+            className="09/05/2023 my-3"
             date="09/05/2023"
             text="Al Mav di Ercolano il progetto dell'artista Enzo Marino per il bimillenario dalla nascita di Plinio Il Vecchio"
             image={Virgilio}
             url="https://bit.ly/42mWLGR"
           />
           <NewsCard
-            className="mx-3 my-3"
+            className="09/05/2023 my-3"
             date="09/05/2023"
             text='AD ERCOLANO - Al Mav il progetto "Vesuvio" di Enzo Marino per il bimillenario dalla nascita di Plinio il Vecchio'
             image={Magazine}
@@ -88,14 +88,14 @@ export default function Contatti() {
           />
 
           <NewsCard
-            className="mx-3 my-3"
+            className="09/05/2023 my-3"
             date="09/05/2023"
             text="Al MAV di Ercolano il progetto Vesuvio di Enzo Marino per il Bimillenario dalla nascita di Plinio il Vecchio"
             image={Cronache}
             url="https://bit.ly/3pgmke0"
           />
           <NewsCard
-            className="mx-3 my-3"
+            className="09/05/2023 my-3"
             date="09/05/2023"
             text="Ercolano, al Mav il progetto Vesuvio per bimillenario nascita di Plinio il Vecchio"
             image={Cult}
