@@ -122,7 +122,7 @@ function VigamaMembri() {
       <div class="small-tittle col-12 d-flex flex-column">
         <div className="d-flex justify-content-center">
           <img
-            className="img-fluid col-xl-4 col-lg-2 col-md-4 col-sm-5 col-xs-2  pt-5 mb-5"
+            className="img-fluid col-xl-3 col-lg-3 col-md-6  pt-5 mb-3"
             src={VIGAMA}
           />
         </div>

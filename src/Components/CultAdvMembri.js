@@ -109,7 +109,7 @@ function CultAdvMembri() {
     <div class="row my-5">
       <div className="d-flex justify-content-center">
         <img
-          className="img-fluid col-xl-4 col-lg-4 col-md-4 mt-5 mb-5"
+          className="img-fluid col-xl-4 col-lg-4 col-md-6 mt-5 mb-5"
           src={CultAdv}
         />
       </div>
