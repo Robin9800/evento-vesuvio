@@ -1,14 +1,26 @@
 import React from "react";
+import NewsCard from "./NewsCard";
 import newsvesuvio from "./Immagini/newsvesuvio.png";
+import Cult from "./Immagini/cult.png";
+import Cronache from "./Immagini/cronachedellacampania.jpg";
+import Mattino from "./Immagini/mattino.jpeg";
+import Virgilio from "./Immagini/virgilio.jpg";
+import Magazine from "./Immagini/napolimegazine.jpg";
 
 import styled from "styled-components";
 
-const Container = styled.div`
-  margin: 0 !important;
-  padding: 0 !important;
-`;
+const Container = styled.div``;
 const PatrociniSection = styled.section`
   font-size: 1rem !important;
+`;
+const DivGiornali = styled.div`
+  @media (max-width: 1318px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 `;
 const TitoloSezione = styled.h1`
   animation: slideInAndFade 1s ease-in-out;
@@ -24,53 +36,6 @@ const TitoloSezione = styled.h1`
     }
   }
 `;
-const Descrizione = styled.p`
-  font-size: 1rem !important;
-
-  text-align: start;
-  margin-bottom: 30px;
-`;
-const CenteredDiv = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  .container-imamgine-descrizione {
-    padding-right: 0;
-
-    @media (max-width: 991px) {
-      padding-right: 0 !important;
-    }
-  }
-
-  @media (max-width: 991px) {
-    flex-direction: column;
-
-    .descrizioni {
-      text-align: center;
-      margin-top: 20px;
-    }
-  }
-`;
-const Sezione = styled.div`
-  padding-bottom: 5rem;
-  padding-top: 5rem;
-  @media (max-width: 487px) {
-    h3,
-    h2,
-    h5 {
-      font-size: 0.95rem;
-    }
-  }
-  @media (min-width: 770px) and (max-width: 100px) {
-    h3,
-    h2,
-    h5 {
-      font-size: 2rem;
-    }
-  }
-`;
 
 export default function Contatti() {
   return (
@@ -79,10 +44,7 @@ export default function Contatti() {
         backgroundColor: "#181818",
       }}
     >
-      <Container
-        class=" px-5 py-5 mt-5 rounded-5"
-        style={{ backgroundColor: "#f4f1ee" }}
-      >
+      <Container class=" px-5 rounded-5" style={{ backgroundColor: "#f4f1ee" }}>
         <div
           className="p-5 d-flex justify-content-start align-items-center text-center bg-image"
           style={{
@@ -102,27 +64,44 @@ export default function Contatti() {
             </h1>
           </TitoloSezione>
         </div>
-        <CenteredDiv class="row d-flex ">
-          <Sezione class=" d-flex justify-content-center">
-            <div class="right-caption">
-              <div class="small-tittle d-flex flex-column">
-                <div class=" d-flex justify-content-center p-0">
-                  <div className=" d-flex flex-column justify-content-center text-center">
-                    <h1
-                      style={{
-                        color: "black",
-                        fontWeight: "bold",
-                      }}
-                      className="col-12"
-                    >
-                      IN ARRIVO
-                    </h1>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Sezione>
-        </CenteredDiv>
+        <DivGiornali className="d-flex justify-content-between px-5 py-5">
+          <NewsCard
+            className="mx-3 my-3"
+            date="09/05/2023"
+            text="Al museo archeologico di Ercolano il progetto di Enzo Marino per il bimillenario dalla nascita di Plinio il vecchio"
+            image={Mattino}
+            url="https://bit.ly/3LSB0rg"
+          />
+          <NewsCard
+            className="mx-3 my-3"
+            date="09/05/2023"
+            text="Al Mav di Ercolano il progetto dell'artista Enzo Marino per il bimillenario dalla nascita di Plinio Il Vecchio"
+            image={Virgilio}
+            url="https://bit.ly/42mWLGR"
+          />
+          <NewsCard
+            className="mx-3 my-3"
+            date="09/05/2023"
+            text='AD ERCOLANO - Al Mav il progetto "Vesuvio" di Enzo Marino per il bimillenario dalla nascita di Plinio il Vecchio'
+            image={Magazine}
+            url="https://bit.ly/44MnkqM"
+          />
+
+          <NewsCard
+            className="mx-3 my-3"
+            date="09/05/2023"
+            text="Al MAV di Ercolano il progetto Vesuvio di Enzo Marino per il Bimillenario dalla nascita di Plinio il Vecchio"
+            image={Cronache}
+            url="https://bit.ly/3pgmke0"
+          />
+          <NewsCard
+            className="mx-3 my-3"
+            date="09/05/2023"
+            text="Ercolano, al Mav il progetto Vesuvio per bimillenario nascita di Plinio il Vecchio"
+            image={Cult}
+            url="https://bit.ly/3NWWcPS"
+          />
+        </DivGiornali>
       </Container>
     </PatrociniSection>
   );
