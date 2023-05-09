@@ -119,7 +119,7 @@ export default function Patrocini() {
         <CenteredDiv class="row align-items-center justify-content-center">
           <Sezione class="col-xl-12 col-lg-12 col-md-10">
             <div className="d-flex flex-column">
-              <h2 className="text-center">
+              <h2 className="text-center" style={{ color: "rgb(255 125 0)" }}>
                 PRIMA LETTERA DI PLINIO IL GIOVANE A TACITO
               </h2>
               <p className="pt-4">

@@ -40,7 +40,9 @@ const Data = styled.span`
   }
 `;
 const P = styled.p`
+  color: white;
   animation: comparsaSotto 1s ease-in-out;
+  margin-top: 8rem;
   font-size: 1.2rem !important;
   @media (max-width: 914px) {
     text-align: center;
@@ -48,6 +50,8 @@ const P = styled.p`
   }
   @media (max-width: 435px) {
     text-align: center;
+    margin-top: 0;
+
     font-size: 0.7rem !important;
   }
 `;
@@ -112,7 +116,9 @@ const Titolo = styled.div`
   
 `;
 const Em = styled.em`
-  animation: comparsaSotto 1s ease-in-out;
+  color: rgb(255 125 0);
+
+  animation: comparsaSotto 1.3s ease-in-out;
 
   @keyframes comparsaSotto {
     from {
@@ -138,6 +144,7 @@ const Em = styled.em`
   }
 `;
 const DivData = styled.div`
+  margin-right: 1rem;
   @media (max-width: 487px) {
     align-self: center !important;
     margin: 0 !important;
@@ -182,18 +189,18 @@ const ContainerJumbotron = styled.div`
   }
   @media (max-width: 914px) {
     display: flex;
-    margin-top: 6rem;
     flex-direction: column !important;
   }
 `;
 const ContainerDescrizione = styled.p`
-  margin-top: 6rem;
+  margin-top: 5rem;
 `;
 const Descrizione = styled.p`
-animation: slideInAndFade 1s ease-in-out;
+color: rgb(255 125 0);
 
-color: white;
-  font-size: 1rem !important;
+animation: comparsaDestra 1s ease-in-out;
+margin:0;
+  font-size: 0.7rem !important;
   text-align: center;
   @media (max-width: 435px) {
     text-align: center !important;
@@ -208,10 +215,7 @@ color: white;
 
   } 
   @media (min-width: 350px) and (max-width: 564px) {
-
     font-size 0.8rem !important;
-
-
   } 
   text-align: start;
   font-weight: bolder;
@@ -243,14 +247,9 @@ const Jumbotron = () => {
               <Titolo style={{ marginBottom: "0" }}>
                 VESUVIO LUCE CHE BRUCIA
               </Titolo>
-              <Em style={{ fontSize: "2rem", color: "#e08126" }}>
+              <Em style={{ fontSize: "2rem" }}>
                 Plinio il vecchio intuisce/scolpisce il magma
               </Em>
-              <P>
-                È un’ incursione di Enzo Marino nell’animo e nell’esperienza
-                trascendente di Gaius Plinius Secundus mentre lascia l’"ager
-                stabianus” per inoltrarsi nel mondo dell’Ade.
-              </P>
             </div>
             <DivData className="d-flex flex-column  mr-5 pr-3">
               <Data className="font-italic" style={{ width: "275px" }}>
@@ -259,18 +258,23 @@ const Jumbotron = () => {
                   di Napoli Italia Parco del Vesuvio c/o Gran Cono
                 </a>
               </Data>
-              <Data className="font-italic" style={{ color: "white" }}>
+              <Data className="font-italic mb-4" style={{ color: "white" }}>
                 16 maggio 2023 h. 9:30
               </Data>
+              <Descrizione>
+                «Con il Patrocinio della Città Metropolitana di Napoli»
+              </Descrizione>
+              <Descrizione>
+                Questa iniziativa è contro il “sistema” della camorra
+              </Descrizione>
             </DivData>
           </ContainerJumbotron>
           <ContainerDescrizione>
-            <Descrizione>
-              «Con il Patrocinio della Città Metropolitana di Napoli»
-            </Descrizione>
-            <Descrizione>
-              Questa iniziativa è contro il “sistema” della camorra{" "}
-            </Descrizione>
+            <P>
+              È un’ incursione di Enzo Marino nell’animo e nell’esperienza
+              trascendente di Gaius Plinius Secundus mentre lascia l’"ager
+              stabianus” per inoltrarsi nel mondo dell’Ade.
+            </P>
           </ContainerDescrizione>
         </Container>
       </div>
