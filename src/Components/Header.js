@@ -51,8 +51,6 @@ const Navbar = styled(MDBNavbar)`
   }
 
   /* Stile per schermi con larghezza inferiore a 390px */
-  @media (max-width: 992px) {
-  }
 `;
 
 const Hamburger = styled(MDBNavbarToggler)`

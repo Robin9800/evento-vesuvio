@@ -19,7 +19,7 @@ const DivGiornali = styled.div`
     flex-direction: column;
     align-items: center;
   }
-  @media (max-width: 350px) {
+  @media (max-width: 400px) {
     padding: 0 !important;
   }
   display: flex;
