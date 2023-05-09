@@ -138,7 +138,7 @@ const Em = styled.em`
     padding: 0 !important;
   }
   /* Stile per schermi con larghezza compresa tra572px */
-  min-width: 486px) and (max-width: 572px) {
+  min-width: 350px) and (max-width: 572px) {
     text-align: center !important;
     font-size: 0.5rem !important;
   }
