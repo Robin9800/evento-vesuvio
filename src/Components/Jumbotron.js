@@ -182,7 +182,7 @@ const ContainerJumbotron = styled.div`
   }
   @media (max-width: 914px) {
     display: flex;
-    margin-top: 10rem;
+    margin-top: 6rem;
     flex-direction: column !important;
   }
 `;
