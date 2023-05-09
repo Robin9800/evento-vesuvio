@@ -190,6 +190,8 @@ const ContainerDescrizione = styled.p`
   margin-top: 6rem;
 `;
 const Descrizione = styled.p`
+animation: slideInAndFade 1s ease-in-out;
+
 color: white;
   font-size: 1rem !important;
   text-align: center;
