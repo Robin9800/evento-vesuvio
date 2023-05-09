@@ -1,4 +1,5 @@
 import React from "react";
+import "../Css/NewsCards.css";
 import NewsCard from "./NewsCard";
 import newsvesuvio from "./Immagini/newsvesuvio.png";
 import Cult from "./Immagini/cult.png";
@@ -25,6 +26,7 @@ const DivGiornali = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
 `;
+
 const TitoloSezione = styled.h1`
   animation: slideInAndFade 1s ease-in-out;
 
@@ -69,14 +71,14 @@ export default function Contatti() {
         </div>
         <DivGiornali className="d-flex justify-content-between px-5 py-5">
           <NewsCard
-            className=" my-3"
+            className=" my-3 fade-in"
             date="09/05/2023"
             text="Al museo archeologico di Ercolano il progetto di Enzo Marino per il bimillenario dalla nascita di Plinio il vecchio"
             image={Mattino}
             url="https://bit.ly/3LSB0rg"
           />
           <NewsCard
-            className="09/05/2023 my-3"
+            className="09/05/2023 my-3 fade-in"
             date="09/05/2023"
             text="Al Mav di Ercolano il progetto dell'artista Enzo Marino per il bimillenario dalla nascita di Plinio Il Vecchio"
             image={Virgilio}
