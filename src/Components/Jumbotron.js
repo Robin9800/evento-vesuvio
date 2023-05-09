@@ -7,12 +7,12 @@ const Data = styled.span`
   a {
     color: rgb(255 125 0);
   }
-  animation: slideInAndFade 1s ease-in-out;
+  animation: comparsaDestra 1s ease-in-out;
 
-  @keyframes slideInAndFade {
+  @keyframes comparsaDestra {
     from {
       opacity: 0;
-      transform: translateY(-100%);
+      transform: translateX(100%);
     }
     to {
       opacity: 1;
@@ -30,10 +30,42 @@ const Data = styled.span`
   @media (min-width: 767px) and (max-width: 1072px) {
     color: white;
   }
+  @media (max-width: 914px) {
+    text-align: center;
+    font-size: 1rem !important;
+  }
+  @media (max-width: 435px) {
+    text-align: center;
+    font-size: 0.7rem !important;
+  }
+`;
+const P = styled.p`
+  animation: comparsaSotto 1s ease-in-out;
+  font-size: 1.2rem !important;
+  @media (max-width: 914px) {
+    text-align: center;
+    font-size: 1rem !important;
+  }
+  @media (max-width: 435px) {
+    text-align: center;
+    font-size: 0.7rem !important;
+  }
 `;
 
 const Titolo = styled.div`
   color: white;
+  animation: slideInAndFade 1s ease-in-out;
+
+  @keyframes slideInAndFade {
+    from {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
   /* Stile per schermi con larghezza compresa tra 487px e 768px */
   @media (min-width: 487px) and (max-width: 768px) {
     .text-white {
@@ -66,19 +98,37 @@ const Titolo = styled.div`
   }
   /* Stile per schermi con larghezza superiore a 1072px */
   @media (min-width: 1072px) {
-    margin-right: 24rem;
     margin-bottom: 0.8rem;
 
     font-size: 2.8rem !important;
     font-weight: bolder;
   }
+
+  @media (max-width: 435px) {
+  
+    font-size: 1.3rem !important;
+  }
+
+  
 `;
 const Em = styled.em`
+  animation: comparsaSotto 1s ease-in-out;
+
+  @keyframes comparsaSotto {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
   /* Stile per schermi con larghezza inferiore a 1072px */
   @media (max-width: 487px) {
     text-align: center !important;
     font-size: 1rem !important;
-    margin: 0 !important;
+    margin-top: 1rem !important;
     padding: 0 !important;
   }
   /* Stile per schermi con larghezza compresa tra572px */
@@ -101,12 +151,18 @@ const DivData = styled.div`
     padding: 0 !important;
     color: red !important;
   }
+  @media (max-width: 914px) {
+    text-align: center;
+    margin-top: 2rem !important;
+    font-size: 1rem !important;
+  }
 `;
 
-const ContainerTitolo = styled.div`
+const Container = styled.div``;
+
+const ContainerJumbotron = styled.div`
   animation: fadeIn 1s ease-in-out;
   animation-fill-mode: both;
-  margin-top: 12rem;
   text-align: start;
   margin-left: 7rem;
   width: 100%;
@@ -117,7 +173,6 @@ const ContainerTitolo = styled.div`
     display: flex !important;
     justify-content: center !important;
     margin-left: 0;
-    margin-top: 12rem;
   }
   /* Stile per schermi con larghezza compresa tra 768px a 902px */
   @media (min-width: 487px) and (max-width: 767px) {
@@ -125,38 +180,42 @@ const ContainerTitolo = styled.div`
     justify-content: center !important;
     margin-left: 0;
   }
+  @media (max-width: 914px) {
+    display: flex;
+    margin-top: 10rem;
+    flex-direction: column !important;
+  }
 `;
-
+const ContainerDescrizione = styled.p`
+  margin-top: 6rem;
+`;
 const Descrizione = styled.p`
-  animation: fadeIn 1s ease-in-out;
-  animation-fill-mode: both;
-  margin-top: 8rem;
-
-  color: white;
-  text-align: center;
+color: white;
   font-size: 1rem !important;
-  font-weight: bolder;
+  text-align: center;
+  @media (max-width: 435px) {
+    text-align: center !important;
+    font-size 0.8rem !important;
+    margin-left: 0 !Important;
+  }
+  /* Stile per schermi con larghezza compresa tra 768px a 902px */
+  @media (min-width: 485px) and (max-width: 571px) {
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(50%);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  @media (max-width: 767px) {
-    font-size: 0.7rem !important;
-    margin-bottom: 3rem; !important;
-  }
-  @media (min-width: 1024px) {
-   font-size: 1.2rem !important;
-  }
+    font-size 1.2rem !important;
+    margin-left: 0 !Important;
+
+  } 
+  @media (min-width: 350px) and (max-width: 564px) {
+
+    font-size 0.8rem !important;
+
+
+  } 
+  text-align: start;
+  font-weight: bolder;
 `;
 
-const Jumbotron = ({ onCarouselClick }) => {
+const Jumbotron = () => {
   const link = [
     {
       id: 1,
@@ -164,16 +223,6 @@ const Jumbotron = ({ onCarouselClick }) => {
       title: "Parco vesuvio",
     },
   ];
-  const [showCarousel, setShowCarousel] = useState(false);
-
-  const handleCarouselClick = () => {
-    setShowCarousel(true);
-    if (onCarouselClick) onCarouselClick();
-  };
-
-  const handleCloseClick = () => {
-    setShowCarousel(false);
-  };
 
   return (
     <div
@@ -185,9 +234,9 @@ const Jumbotron = ({ onCarouselClick }) => {
       }}
     >
       <div className="mask" style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}>
-        <div className=" d-flex justify-content-around flex-column align-items-center h-100">
-          <ContainerTitolo className="text-white d-flex justify-content-between">
-            <div className="d-flex flex-column">
+        <Container className=" d-flex flex-column align-items-center justify-content-end h-100">
+          <ContainerJumbotron className="text-white d-flex justify-content-between">
+            <div className="d-flex col-xl-8 col-lg-8 col-md-16 flex-column">
               <Titolo>AUES EUS</Titolo>
               <Titolo style={{ marginBottom: "0" }}>
                 VESUVIO LUCE CHE BRUCIA
@@ -195,25 +244,33 @@ const Jumbotron = ({ onCarouselClick }) => {
               <Em style={{ fontSize: "2rem", color: "#e08126" }}>
                 Plinio il vecchio intuisce/scolpisce il magma
               </Em>
+              <P>
+                È un’ incursione di Enzo Marino nell’animo e nell’esperienza
+                trascendente di Gaius Plinius Secundus mentre lascia l’"ager
+                stabianus” per inoltrarsi nel mondo dell’Ade.
+              </P>
             </div>
-          </ContainerTitolo>
-          <DivData className="d-flex flex-column align-self-end  mr-5 pr-3">
-            <Data className="font-italic" style={{ width: "275px" }}>
-              <a target="_blank" rel="noopener noreferrer" href={link[0].url}>
-                <i class="fa-solid fa-location-dot"></i> Città Metropolitana di
-                Napoli Italia Parco del Vesuvio c/o Gran Cono
-              </a>
-            </Data>
-            <Data className="font-italic" style={{ color: "white" }}>
-              16 maggio 2023 h. 9:30
-            </Data>
-          </DivData>
-          <Descrizione>
-            È un’ incursione di Enzo Marino nell’animo e nell’esperienza
-            trascendente di Gaius Plinius Secundus mentre lascia l’"ager
-            stabianus” per inoltrarsi nel mondo dell’Ade.
-          </Descrizione>
-        </div>
+            <DivData className="d-flex flex-column  mr-5 pr-3">
+              <Data className="font-italic" style={{ width: "275px" }}>
+                <a target="_blank" rel="noopener noreferrer" href={link[0].url}>
+                  <i class="fa-solid fa-location-dot"></i> Città Metropolitana
+                  di Napoli Italia Parco del Vesuvio c/o Gran Cono
+                </a>
+              </Data>
+              <Data className="font-italic" style={{ color: "white" }}>
+                16 maggio 2023 h. 9:30
+              </Data>
+            </DivData>
+          </ContainerJumbotron>
+          <ContainerDescrizione>
+            <Descrizione>
+              «Con il Patrocinio della Città Metropolitana di Napoli»
+            </Descrizione>
+            <Descrizione>
+              Questa iniziativa è contro il “sistema” della camorra{" "}
+            </Descrizione>
+          </ContainerDescrizione>
+        </Container>
       </div>
     </div>
   );

@@ -127,7 +127,7 @@ function PatrociniLoghi() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <SpeakerImage src={Napoli} alt="Anna Marino" />
+            <SpeakerImage src={Napoli} alt="città metropolitana di napoli" />
             <SpeakerCaption>
               <h3>Città Metropolitana Di Napoli</h3>
             </SpeakerCaption>
@@ -141,7 +141,7 @@ function PatrociniLoghi() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <SpeakerImage src={Parcovesuvio} alt="Anna Marino" />
+            <SpeakerImage src={Parcovesuvio} alt="parco vesuvio" />
             <SpeakerCaption>
               <h3>Parco Nazionale Del Vesuvio</h3>
             </SpeakerCaption>
@@ -155,7 +155,7 @@ function PatrociniLoghi() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <SpeakerImage src={Mav} alt="Anna Marino" />
+            <SpeakerImage src={Mav} alt="mav" />
             <SpeakerCaption>
               <h3>Museo Archeologico Virtuale</h3>
             </SpeakerCaption>

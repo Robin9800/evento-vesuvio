@@ -30,7 +30,6 @@ const TitoloSezione = styled.h1`
     }
   }
 `;
-
 const ChiSiamoSection = styled.section`
   font-size: 1rem !important;
 `;
@@ -77,8 +76,6 @@ const Descrizione = styled.p`
 
 
   } 
-  
-
   text-align: start;
   font-weight: bolder;
   margin-bottom: 30px;
@@ -92,11 +89,6 @@ const SottotitoloSezione = styled.div`
       font-size: 1rem;
     }
   }
-`;
-const Img = styled.img`
-  height: auto;
-  width: 100%;
-  margin-bottom: 1.5rem;
 `;
 
 export default function ChiSiamo() {
