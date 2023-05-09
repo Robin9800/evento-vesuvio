@@ -192,9 +192,7 @@ const ContainerJumbotron = styled.div`
     flex-direction: column !important;
   }
 `;
-const ContainerDescrizione = styled.p`
-  margin-top: 5rem;
-`;
+const ContainerDescrizione = styled.p``;
 const Descrizione = styled.p`
 color: rgb(255 125 0);
 
@@ -232,7 +230,7 @@ const Jumbotron = () => {
 
   return (
     <div
-      className="p-5 text-center bg-image"
+      className="px-5 text-center bg-image"
       style={{
         backgroundImage: `url(${Vesuvio})`,
         height: "100vh",
@@ -240,7 +238,7 @@ const Jumbotron = () => {
       }}
     >
       <div className="mask" style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}>
-        <Container className=" d-flex flex-column align-items-center justify-content-end h-100">
+        <Container className=" d-flex flex-column align-items-center justify-content-center mt-5 pt-5 h-100">
           <ContainerJumbotron className="text-white d-flex justify-content-between">
             <div className="d-flex col-xl-8 col-lg-8 col-md-16 flex-column">
               <Titolo>AUES EUS</Titolo>
@@ -269,7 +267,7 @@ const Jumbotron = () => {
               </Descrizione>
             </DivData>
           </ContainerJumbotron>
-          <ContainerDescrizione>
+          <ContainerDescrizione className="mt-5">
             <P>
               È un’ incursione di Enzo Marino nell’animo e nell’esperienza
               trascendente di Gaius Plinius Secundus mentre lascia l’"ager
