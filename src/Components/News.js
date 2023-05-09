@@ -18,6 +18,9 @@ const DivGiornali = styled.div`
     flex-direction: column;
     align-items: center;
   }
+  @media (max-width: 350px) {
+    padding: 0 !important;
+  }
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -64,7 +67,7 @@ export default function Contatti() {
             </h1>
           </TitoloSezione>
         </div>
-        <DivGiornali className="d-flex justify-content-between  py-5">
+        <DivGiornali className="d-flex justify-content-between px-5 py-5">
           <NewsCard
             className=" my-3"
             date="09/05/2023"
