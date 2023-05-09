@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import VIGAMA from "./Immagini/Vigama.jpeg";
 import AnnaMarino from "./Immagini/AnnaMarino.jpeg";
 import ImmaGatto from "./Immagini/ImmaGatto.jpeg";
 import RedentaVitulano from "./Immagini/RedentaVitulano.jpeg";
@@ -117,18 +118,13 @@ const Descrizione = styled.p`
 `;
 function VigamaMembri() {
   return (
-    <div class="row">
+    <div class="row mt-5">
       <div class="small-tittle col-12 d-flex flex-column">
-        <div class=" d-flex justify-content-center p-0 mt-5">
-          <div className="col-xl-12 col-lg-12 col-md-12 d-flex justify-content-center">
-            <h3
-              translate="no"
-              className="text-center col-xl-4 col-lg-4 col-md-4 py-2 rounded-1"
-              style={{ color: "white", backgroundColor: "#042881" }}
-            >
-              VI.GA.MA GROUP
-            </h3>
-          </div>
+        <div className="d-flex justify-content-center">
+          <img
+            className="img-fluid col-xl-4 col-lg-2 col-md-4 col-sm-5 col-xs-2  pt-5 mb-5"
+            src={VIGAMA}
+          />
         </div>
         <Descrizione className="pt-4" style={{ color: "black" }}>
           Il gruppo Vi.Ga.Ma opera in campo artistico e letterario con l'intento

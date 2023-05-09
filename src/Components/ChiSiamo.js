@@ -1,8 +1,8 @@
 import React from "react";
 import VigamaMembri from "./VigamaMembri";
 import EnzoInfo from "./EnzoInfo";
+import CultAdvMembri from "./CultAdvMembri";
 import chisiamovesuvio from "./Immagini/chisiamovesuvio1.png";
-
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -188,6 +188,10 @@ export default function ChiSiamo() {
 
                   <div class="small-tittle col-xl-12 col-lg-12 col-md-12  d-flex justify-content-center p-0 mt-5">
                     <VigamaMembri />
+                  </div>
+
+                  <div class="small-tittle col-xl-12 col-lg-12 col-md-12  d-flex justify-content-center p-0 mt-5">
+                    <CultAdvMembri />
                   </div>
                 </div>
               </div>
