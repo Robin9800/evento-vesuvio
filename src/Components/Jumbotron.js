@@ -42,7 +42,7 @@ const Data = styled.span`
 const P = styled.p`
   color: white;
   animation: comparsaSotto 1s ease-in-out;
-  margin-top: 8rem;
+  margin-top: 2rem;
   font-size: 1.2rem !important;
   @media (max-width: 914px) {
     text-align: center;
@@ -144,6 +144,9 @@ const Em = styled.em`
   }
 `;
 const DivData = styled.div`
+  margin-right: 2rem !important;
+  margin-top: 2rem !important;
+  align-self: end;
   margin-right: 1rem;
   @media (max-width: 487px) {
     align-self: center !important;
@@ -168,15 +171,17 @@ const DivData = styled.div`
 const Container = styled.div``;
 
 const ContainerJumbotron = styled.div`
+  margin-bottom: 8rem;
   animation: fadeIn 1s ease-in-out;
   animation-fill-mode: both;
   text-align: start;
-  margin-left: 7rem;
+  margin-left: 2rem;
   width: 100%;
   position: relative;
   top: 0;
 
   @media (max-width: 487px) {
+    margin-bottom: 5rem;
     display: flex !important;
     justify-content: center !important;
     margin-left: 0;
@@ -200,7 +205,7 @@ animation: comparsaDestra 1s ease-in-out;
 margin:0;
   font-size: 0.7rem !important;
   text-align: center;
-  @media (max-width: 435px) {
+  @media (max-width: 500px) {
     text-align: center !important;
     font-size 0.8rem !important;
     margin-left: 0 !Important;
@@ -249,7 +254,7 @@ const Jumbotron = () => {
                 Plinio il vecchio intuisce/scolpisce il magma
               </Em>
             </div>
-            <DivData className="d-flex flex-column  mr-5 pr-3">
+            <DivData className="d-flex flex-column ">
               <Data className="font-italic" style={{ width: "275px" }}>
                 <a target="_blank" rel="noopener noreferrer" href={link[0].url}>
                   <i class="fa-solid fa-location-dot"></i> Città Metropolitana
