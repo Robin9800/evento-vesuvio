@@ -78,9 +78,14 @@ export default function Contatti() {
           </TitoloSezione>
         </div>
         <div>
-          <div className="container ">
+          <div className="container mt-5">
+            <div>
+              <h2 className="text-center  mb-4">
+                GUARDA IL TRAILER DELL'EVENTO:
+              </h2>
+            </div>
             <div
-              className="d-flex justify-content-center my-5 "
+              className="d-flex justify-content-center mb-2 "
               style={{
                 height: "50vh",
               }}
