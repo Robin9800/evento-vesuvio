@@ -1,7 +1,6 @@
 import React from "react";
 import patrocinivesuvio from "./Immagini/patrocinivesuvio.png";
 import PatrociniLoghi from "./PatrociniLoghi";
-
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -27,7 +26,8 @@ const TitoloSezione = styled.h1`
 `;
 const CenteredDiv = styled.div`
   display: flex;
-  flex-direction: row;
+  margin-top: 5rem;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
@@ -79,15 +79,12 @@ export default function Patrocini() {
             </h1>
           </TitoloSezione>
         </div>
-        <CenteredDiv class="row d-flex align-items-center justify-content-center">
-          <div class="descrizioni">
-            <div class="right-caption">
-              <div class="small-tittle d-flex flex-column">
-                <div class="small-tittle  d-flex justify-content-center p-0 my-5">
-                  <PatrociniLoghi />
-                </div>
-              </div>
-            </div>
+        <CenteredDiv class="d-flex flex-column align-items-center justify-content-center">
+          <div>
+            <h2>CON IL PATROCINIO:</h2>
+          </div>
+          <div class="small-tittle  d-flex justify-content-center p-0 my-5">
+            <PatrociniLoghi />
           </div>
         </CenteredDiv>
       </Container>

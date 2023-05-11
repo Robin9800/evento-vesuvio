@@ -43,7 +43,6 @@ const ProgramDetail = styled.div`
     opacity: 1;
   }
 `;
-
 const JobItems = styled.div`
   display: flex;
   flex-direction: row;

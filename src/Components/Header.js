@@ -4,6 +4,8 @@ import Parcovesuvio from "./Immagini/Parco Vesuvio.jpeg";
 import Napoli from "./Immagini/Napoli.png";
 import Vigama from "./Immagini/Vigama.jpeg";
 import Mav from "./Immagini/mav.jpeg";
+import BccNapoli from "./Immagini/bcc.jpg";
+
 import {
   MDBContainer,
   MDBNavbar,
@@ -59,7 +61,6 @@ const Hamburger = styled(MDBNavbarToggler)`
 const Ul = styled(MDBNavbarNav)`
   justify-content: end;
 `;
-
 const Link = styled(MDBNavbarLink)`
   text-decoration: none;
   color: white;
@@ -201,6 +202,7 @@ export default function Header() {
           <Img src={Mav} />
           <Img style={{ backgroundColor: "white" }} src={Napoli} />
           <Img src={Vigama} />
+          <Img src={BccNapoli} />
         </MDBNavbarBrand>
         <Hamburger
           aria-expanded="false"

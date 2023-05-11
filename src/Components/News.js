@@ -7,6 +7,8 @@ import Cronache from "./Immagini/cronachedellacampania.jpg";
 import Mattino from "./Immagini/mattino.jpeg";
 import Virgilio from "./Immagini/virgilio.jpg";
 import Magazine from "./Immagini/napolimegazine.jpg";
+import Video from "./Immagini/TRAILER-ENZO-VESUVIO.mp4";
+import CopertinaVideo from "./Immagini/Enzo1.jpeg";
 
 import styled from "styled-components";
 
@@ -69,44 +71,58 @@ export default function Contatti() {
             </h1>
           </TitoloSezione>
         </div>
-        <DivGiornali className="d-flex justify-content-between px-5 py-5">
-          <NewsCard
-            className=" my-3 fade-in"
-            date="09/05/2023"
-            text="Al museo archeologico di Ercolano il progetto di Enzo Marino per il bimillenario dalla nascita di Plinio il vecchio"
-            image={Mattino}
-            url="https://bit.ly/3LSB0rg"
-          />
-          <NewsCard
-            className="09/05/2023 my-3 fade-in"
-            date="09/05/2023"
-            text="Al Mav di Ercolano il progetto dell'artista Enzo Marino per il bimillenario dalla nascita di Plinio Il Vecchio"
-            image={Virgilio}
-            url="https://bit.ly/42mWLGR"
-          />
-          <NewsCard
-            className="09/05/2023 my-3"
-            date="09/05/2023"
-            text='AD ERCOLANO - Al Mav il progetto "Vesuvio" di Enzo Marino per il bimillenario dalla nascita di Plinio il Vecchio'
-            image={Magazine}
-            url="https://bit.ly/44MnkqM"
-          />
+        <div>
+          <div className="container ">
+            <div
+              className="col-12 d-flex justify-content-center my-5 "
+              style={{
+                height: "50vh",
+              }}
+            >
+              <video className="rounded-5" controls poster={CopertinaVideo}>
+                <source src={Video} type="video/mp4" />
+              </video>
+            </div>
+          </div>
+          <DivGiornali className="d-flex justify-content-between px-5 py-5">
+            <NewsCard
+              className=" my-3 fade-in"
+              date="09/05/2023"
+              text="Al museo archeologico di Ercolano il progetto di Enzo Marino per il bimillenario dalla nascita di Plinio il vecchio"
+              image={Mattino}
+              url="https://bit.ly/3LSB0rg"
+            />
+            <NewsCard
+              className="09/05/2023 my-3 fade-in"
+              date="09/05/2023"
+              text="Al Mav di Ercolano il progetto dell'artista Enzo Marino per il bimillenario dalla nascita di Plinio Il Vecchio"
+              image={Virgilio}
+              url="https://bit.ly/42mWLGR"
+            />
+            <NewsCard
+              className="09/05/2023 my-3"
+              date="09/05/2023"
+              text='AD ERCOLANO - Al Mav il progetto "Vesuvio" di Enzo Marino per il bimillenario dalla nascita di Plinio il Vecchio'
+              image={Magazine}
+              url="https://bit.ly/44MnkqM"
+            />
 
-          <NewsCard
-            className="09/05/2023 my-3"
-            date="09/05/2023"
-            text="Al MAV di Ercolano il progetto Vesuvio di Enzo Marino per il Bimillenario dalla nascita di Plinio il Vecchio"
-            image={Cronache}
-            url="https://bit.ly/3pgmke0"
-          />
-          <NewsCard
-            className="09/05/2023 my-3"
-            date="09/05/2023"
-            text="Ercolano, al Mav il progetto Vesuvio per bimillenario nascita di Plinio il Vecchio"
-            image={Cult}
-            url="https://bit.ly/3NWWcPS"
-          />
-        </DivGiornali>
+            <NewsCard
+              className="09/05/2023 my-3"
+              date="09/05/2023"
+              text="Al MAV di Ercolano il progetto Vesuvio di Enzo Marino per il Bimillenario dalla nascita di Plinio il Vecchio"
+              image={Cronache}
+              url="https://bit.ly/3pgmke0"
+            />
+            <NewsCard
+              className="09/05/2023 my-3"
+              date="09/05/2023"
+              text="Ercolano, al Mav il progetto Vesuvio per bimillenario nascita di Plinio il Vecchio"
+              image={Cult}
+              url="https://bit.ly/3NWWcPS"
+            />
+          </DivGiornali>
+        </div>
       </Container>
     </PatrociniSection>
   );

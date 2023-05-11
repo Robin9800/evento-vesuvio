@@ -1,5 +1,6 @@
 import React from "react";
 import Cult from "./Immagini/cult.png";
+import styled from "styled-components";
 
 import {
   MDBCard,
@@ -11,10 +12,19 @@ import {
   MDBRipple,
 } from "mdb-react-ui-kit";
 
+const Card = styled(MDBCard)`
+  height: 200px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
 export default function NewsCard(props) {
   const { date, text, image, url } = props;
   return (
-    <MDBCard className="my-4" style={{ width: "300px", height: "450px" }}>
+    <Card className="my-4" style={{ width: "300px", height: "450px" }}>
       <MDBRipple
         rippleColor="light"
         rippleTag="div"
@@ -40,6 +50,6 @@ export default function NewsCard(props) {
           Leggi di più
         </MDBBtn>
       </MDBCardBody>
-    </MDBCard>
+    </Card>
   );
 }
