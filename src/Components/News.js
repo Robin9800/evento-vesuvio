@@ -16,6 +16,12 @@ const Container = styled.div``;
 const PatrociniSection = styled.section`
   font-size: 1rem !important;
 `;
+const Trailer = styled.video`
+  @media (max-width: 466px) {
+    width: 300px;
+    height: 200px;
+  }
+`;
 const DivGiornali = styled.div`
   @media (max-width: 1318px) {
     flex-direction: column;
@@ -74,14 +80,14 @@ export default function Contatti() {
         <div>
           <div className="container ">
             <div
-              className="col-12 d-flex justify-content-center my-5 "
+              className="d-flex justify-content-center my-5 "
               style={{
                 height: "50vh",
               }}
             >
-              <video className="rounded-5" controls poster={CopertinaVideo}>
+              <Trailer className=" rounded-5" controls poster={CopertinaVideo}>
                 <source src={Video} type="video/mp4" />
-              </video>
+              </Trailer>
             </div>
           </div>
           <DivGiornali className="d-flex justify-content-between px-5 py-5">
