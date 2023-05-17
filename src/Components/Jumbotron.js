@@ -169,6 +169,7 @@ const DivData = styled.div`
 
 const Container = styled.div``;
 const Bimillenario = styled.p`
+  animation: fadeIn 1s ease-in-out;
   font-size: 1.5rem !important;
   margin-bottom: 0;
   @media (max-width: 487px) {
@@ -207,6 +208,7 @@ const ContainerJumbotron = styled.div`
 `;
 const ContainerDescrizione = styled.p``;
 const FraseEffetto = styled.p`
+animation: fadeIn 1s ease-in-out;
   @media (max-width: 435px) {
     font-size: 0.7rem !important;
     margin-top 1rem;
