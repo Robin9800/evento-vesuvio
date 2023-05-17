@@ -305,7 +305,7 @@ const Jumbotron = () => {
                 fontStyle: "italic",
               }}
             >
-              Quando la storia di esaurisce ...comincia la creatività
+              Quando la storia si esaurisce ...comincia la creatività
             </FraseEffetto>
 
             <P>
