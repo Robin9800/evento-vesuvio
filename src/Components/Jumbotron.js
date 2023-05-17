@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const Data = styled.span`
   a {
-    color: rgb(255 125 0);
+    color: white;
   }
   animation: comparsaDestra 1s ease-in-out;
 
@@ -19,30 +19,30 @@ const Data = styled.span`
       transform: translateY(0%);
     }
   }
-  @media (max-width: 487px) {
+  @media (max-width: 450px) {
+    margin: 1rem 0 1 rem 0 !important;
     font-size: 1rem !important;
-    color: white;
+    color: "#e58730" !important;
   }
-  /* Stile per schermi con larghezza compresa tra 768px a 902px */
   @media (min-width: 487px) and (max-width: 767px) {
     color: white;
   }
   @media (min-width: 767px) and (max-width: 1072px) {
     color: white;
   }
-  @media (max-width: 914px) {
+  @media (min-width: 767px) (max-width: 914px) {
     text-align: center;
-    font-size: 1rem !important;
+    font-size: 1.5rem !important;
   }
-  @media (max-width: 435px) {
-    text-align: center;
-    font-size: 0.7rem !important;
+
+  @media (min-width: 1072px) {
+    font-size: 2rem !important;
   }
 `;
 const P = styled.p`
   color: white;
   animation: comparsaSotto 1s ease-in-out;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   font-size: 1.2rem !important;
   @media (max-width: 914px) {
     text-align: center;
@@ -55,7 +55,6 @@ const P = styled.p`
     font-size: 0.7rem !important;
   }
 `;
-
 const Titolo = styled.div`
   color: white;
   animation: slideInAndFade 1s ease-in-out;
@@ -116,7 +115,7 @@ const Titolo = styled.div`
   
 `;
 const Em = styled.em`
-  color: rgb(255 125 0);
+  color: white;
 
   animation: comparsaSotto 1.3s ease-in-out;
 
@@ -144,7 +143,7 @@ const Em = styled.em`
   }
 `;
 const DivData = styled.div`
-  margin-right: 2rem !important;
+  margin-right: 3rem !important;
   margin-top: 2rem !important;
   align-self: end;
   margin-right: 1rem;
@@ -169,9 +168,18 @@ const DivData = styled.div`
 `;
 
 const Container = styled.div``;
+const Bimillenario = styled.p`
+  font-size: 1.5rem !important;
+  margin-bottom: 0;
+  @media (max-width: 487px) {
+    font-size: 0.8rem !important;
+    color: rgb(255 125 0) !important;
+    font-weight: bolder;
+  }
+`;
 
 const ContainerJumbotron = styled.div`
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
   animation: fadeIn 1s ease-in-out;
   animation-fill-mode: both;
   text-align: start;
@@ -181,7 +189,7 @@ const ContainerJumbotron = styled.div`
   top: 0;
 
   @media (max-width: 487px) {
-    margin-bottom: 5rem;
+    margin-bottom: 0;
     display: flex !important;
     justify-content: center !important;
     margin-left: 0;
@@ -198,6 +206,12 @@ const ContainerJumbotron = styled.div`
   }
 `;
 const ContainerDescrizione = styled.p``;
+const FraseEffetto = styled.p`
+  @media (max-width: 435px) {
+    font-size: 0.7rem !important;
+    margin-top 1rem;
+  }
+`;
 const Descrizione = styled.p`
 color: rgb(255 125 0);
 
@@ -207,7 +221,7 @@ margin:0;
   text-align: center;
   @media (max-width: 500px) {
     text-align: center !important;
-    font-size 0.8rem !important;
+    font-size 0.7rem !important;
     margin-left: 0 !Important;
   }
   /* Stile per schermi con larghezza compresa tra 768px a 902px */
@@ -254,16 +268,7 @@ const Jumbotron = () => {
                 Plinio il vecchio intuisce/scolpisce il magma
               </Em>
             </div>
-            <DivData className="d-flex flex-column ">
-              <Data className="font-italic" style={{ width: "275px" }}>
-                <a target="_blank" rel="noopener noreferrer" href={link[0].url}>
-                  <i class="fa-solid fa-location-dot"></i> Città Metropolitana
-                  di Napoli Italia Parco del Vesuvio c/o Gran Cono
-                </a>
-              </Data>
-              <Data className="font-italic mb-4" style={{ color: "white" }}>
-                16 maggio 2023 h. 9:30
-              </Data>
+            <DivData className="d-flex flex-column">
               <Descrizione>
                 «Con il Patrocinio della Città Metropolitana di Napoli»
               </Descrizione>
@@ -273,6 +278,34 @@ const Jumbotron = () => {
             </DivData>
           </ContainerJumbotron>
           <ContainerDescrizione className="mt-5">
+            <Bimillenario
+              style={{
+                fontSize: "4rem",
+                color: "#e58730",
+                fontStyle: "italic",
+              }}
+            >
+              BIMILLENNARIO DELLA NASCITA DI PLINIO IL VECCHIO (Como 23- Stabia
+              79)
+            </Bimillenario>
+            <Data className="font-italic" style={{ width: "275px" }}>
+              <a target="_blank" rel="noopener noreferrer" href={link[0].url}>
+                <i
+                  class="fa-solid fa-location-dot"
+                  style={{ color: "red" }}
+                ></i>{" "}
+                Parco Nazionale del Vesuvio Gran Cono - 19 maggio 2023 h. 10:00
+              </a>
+            </Data>
+            <FraseEffetto
+              style={{
+                color: "white",
+                fontStyle: "italic",
+              }}
+            >
+              Quando la storia di esaurisce ...comincia la creatività
+            </FraseEffetto>
+
             <P>
               È un’ incursione di Enzo Marino nell’animo e nell’esperienza
               trascendente di Gaius Plinius Secundus mentre lascia l’"ager

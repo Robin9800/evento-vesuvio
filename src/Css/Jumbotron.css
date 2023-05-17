@@ -55,21 +55,3 @@ h2 {
   }
 }
 /* Stile per schermi con larghezza superiore a 1072px */
-@media (min-width: 1072px) {
-  .container-titoli {
-    margin-right: 24rem;
-    margin-bottom: 5rem;
-  }
-  .text-white {
-    text-align: start;
-  }
-  h1 {
-    font-size: 3.5rem !important;
-  }
-  h2 {
-    font-size: 2rem !important;
-  }
-  p {
-    font-size: 1.5rem !important;
-  }
-}
