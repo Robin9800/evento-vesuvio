@@ -179,7 +179,7 @@ const Bimillenario = styled.p`
 `;
 
 const ContainerJumbotron = styled.div`
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
   animation: fadeIn 1s ease-in-out;
   animation-fill-mode: both;
   text-align: start;
