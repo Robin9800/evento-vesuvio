@@ -22,7 +22,7 @@ const Card = styled(MDBCard)`
 `;
 
 export default function NewsCard(props) {
-  const { date, text, image, url } = props;
+  const { date, text, image, mediaImage, url } = props;
   return (
     <Card className="my-4" style={{ width: "300px", height: "450px" }}>
       <MDBRipple
@@ -30,12 +30,21 @@ export default function NewsCard(props) {
         rippleTag="div"
         className="bg-image hover-overlay"
       >
+        {mediaImage && (
+          <MDBCardImage
+            style={{ height: "50px", width: "50%" }}
+            src={mediaImage}
+            fluid
+          />
+        )}
+
         <MDBCardImage
-          style={{ height: "150px" }}
+          style={{ height: "150px", width: "100%" }}
           src={image}
           fluid
           alt="cult"
         />
+
         <a>
           <div
             className="mask"

@@ -9,6 +9,12 @@ import Virgilio from "./Immagini/virgilio.jpg";
 import Magazine from "./Immagini/napolimegazine.jpg";
 import Video from "./Immagini/TRAILER-ENZO-VESUVIO.mp4";
 import CopertinaVideo from "./Immagini/Enzo1.jpeg";
+import Copertina from "./Immagini/copertinanews.jpeg";
+import RaiNews from "./Immagini/rainewspng.png";
+import NapoliVillage from "./Immagini/napolivillage.png";
+import TerronianMagazine from "./Immagini/terronianmagazine.png";
+import NewsExpress from "./Immagini/newsexpress.jpg";
+import NapoliFactory from "./Immagini/napolifactory.jpeg";
 
 import styled from "styled-components";
 
@@ -90,12 +96,60 @@ export default function Contatti() {
                 height: "50vh",
               }}
             >
-              <Trailer className=" rounded-5" controls poster={CopertinaVideo}>
+              <Trailer controls poster={CopertinaVideo}>
                 <source src={Video} type="video/mp4" />
               </Trailer>
             </div>
           </div>
           <DivGiornali className="d-flex justify-content-between px-5 py-5">
+            <NewsCard
+              className="my-3 fade-in"
+              date="20/05/2023"
+              text="Al Parco Nazionale del Vesuvio la performance di Enzo Marino su «Plinio il vecchio»"
+              image={Copertina}
+              mediaImage={Mattino}
+              url="https://bit.ly/41VHr33"
+            />
+            <NewsCard
+              className="09/05/2023 my-3 fade-in"
+              date="19/05/2023"
+              text="Sul Vesuvio va in scena la morte di Plinio il Vecchio"
+              image={Copertina}
+              mediaImage={RaiNews}
+              url="https://bit.ly/3pPcno8"
+            />
+            <NewsCard
+              className="my-3 fade-in fs-5"
+              date="19/05/2023"
+              text="Sul Vesuvio Plinio il vecchio rivive grazie alla performance di Enzo Marino"
+              image={Copertina}
+              mediaImage={NapoliVillage}
+              url="https://bit.ly/41WD6N9"
+            />
+            <NewsCard
+              className="my-3 fade-in fs-5"
+              date="19/05/2023"
+              text="ENZO MARINO FA RIVIVERE PLINIO IL VECCHIO SU VESUVIO"
+              image={Copertina}
+              mediaImage={TerronianMagazine}
+              url="https://bit.ly/3WqBmub"
+            />
+            <NewsCard
+              className="my-3 fade-in fs-5"
+              date="19/05/2023"
+              text="Sul Vesuvio Plinio il vecchio rivive grazie alla performance di Enzo Marino"
+              image={Copertina}
+              mediaImage={NewsExpress}
+              url="https://bit.ly/42UNLZW"
+            />
+            <NewsCard
+              className="my-3 fade-in fs-5"
+              date="20/05/2023"
+              text="Sul Vesuvio Plinio il vecchio rivive grazie alla performance di Enzo Marino"
+              image={Copertina}
+              mediaImage={NapoliFactory}
+              url="https://bit.ly/3Iw9j74"
+            />
             <NewsCard
               className=" my-3 fade-in"
               date="09/05/2023"

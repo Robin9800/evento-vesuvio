@@ -309,7 +309,7 @@ export default function Patrocini() {
             </Descrizione>
             <div className="col-12 d-flex justify-content-center mt-2">
               <img
-                className="img-fluid col-xl-5 col-lg-6 col-md-5 rounded-3 mb-5"
+                className="img-fluid col-xl-7 col-lg-8 col-md-7 rounded-3 mb-5 mt-2"
                 src={cratere}
               />
             </div>
