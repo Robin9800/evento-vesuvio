@@ -320,6 +320,11 @@ export default function Patrocini() {
                 src={cratere}
               />
             </div>
+
+            <h2 className="text-center my-5" style={{ color: "rgb(255 125 0)" }}>
+                FOTO DELL'EVENTO
+              </h2>
+            {/* <ImageGallery images={images}/> */}
           </Sezione>
         </CenteredDiv>
       </Container>
