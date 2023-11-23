@@ -1,23 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import Vesuvio from "./Immagini/Vesuvioo.jpeg";
-import "../Css/Jumbotron.css";
 import styled from "styled-components";
 
 const Data = styled.span`
   a {
     color: white;
-  }
-  animation: comparsaDestra 1s ease-in-out;
-
-  @keyframes comparsaDestra {
-    from {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0%);
-    }
   }
   @media (max-width: 450px) {
     margin: 1rem 0 1 rem 0 !important;
@@ -34,14 +21,13 @@ const Data = styled.span`
     text-align: center;
     font-size: 1.5rem !important;
   }
-
   @media (min-width: 1072px) {
     font-size: 2rem !important;
   }
 `;
+
 const P = styled.p`
   color: white;
-  animation: comparsaSotto 1s ease-in-out;
   margin-top: 1.5rem;
   font-size: 1.2rem !important;
   @media (max-width: 914px) {
@@ -51,25 +37,15 @@ const P = styled.p`
   @media (max-width: 435px) {
     text-align: center;
     margin-top: 0;
-
     font-size: 0.7rem !important;
   }
 `;
+
 const Titolo = styled.div`
   color: white;
-  animation: slideInAndFade 1s ease-in-out;
+  /* Stili rimossi per l'effetto di transizione */
+  /* animation: slideInAndFade 1s ease-in-out; */
 
-  @keyframes slideInAndFade {
-    from {
-      opacity: 0;
-      transform: translateY(-100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-  }
-  /* Stile per schermi con larghezza compresa tra 487px e 768px */
   @media (min-width: 487px) and (max-width: 768px) {
     .text-white {
       text-align: start;
@@ -84,64 +60,44 @@ const Titolo = styled.div`
     font-size 1rem !important;
     margin-left: 0 !Important;
   }
-  /* Stile per schermi con larghezza compresa tra 768px a 902px */
   @media (min-width: 485px) and (max-width: 571px) {
     text-align: center !important;
     font-size 1.4rem !important;
-  } 
-  /* Stile per schermi con larghezza compresa tra 768px a 902px */
+  }
   @media (min-width: 571px) and (max-width: 767px) {
     text-align: center !important;
     font-size 1.8rem !important;
-  } 
-  
-  /* Stile per schermi con larghezza compresa tra 576px e 768px */
+  }
   @media (min-width: 767px) and (max-width: 1072px) {
     font-size 2rem !important;
   }
-  /* Stile per schermi con larghezza superiore a 1072px */
   @media (min-width: 1072px) {
     margin-bottom: 0.8rem;
-
     font-size: 2.8rem !important;
     font-weight: bolder;
   }
-
   @media (max-width: 435px) {
-  
     font-size: 1.3rem !important;
   }
-
-  
 `;
+
 const Em = styled.em`
   color: white;
+  /* Stili rimossi per l'effetto di transizione */
+  /* animation: comparsaSotto 1.3s ease-in-out; */
 
-  animation: comparsaSotto 1.3s ease-in-out;
-
-  @keyframes comparsaSotto {
-    from {
-      opacity: 0;
-      transform: translateY(100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-  }
-  /* Stile per schermi con larghezza inferiore a 1072px */
   @media (max-width: 487px) {
     text-align: center !important;
     font-size: 1rem !important;
     margin-top: 1rem !important;
     padding: 0 !important;
   }
-  /* Stile per schermi con larghezza compresa tra572px */
-  min-width: 350px) and (max-width: 572px) {
+  @media (min-width: 350px) and (max-width: 572px) {
     text-align: center !important;
     font-size: 0.5rem !important;
   }
 `;
+
 const DivData = styled.div`
   margin-right: 3rem !important;
   margin-top: 2rem !important;
@@ -153,7 +109,6 @@ const DivData = styled.div`
     padding: 0 !important;
     color: red !important;
   }
-  /* Stile per schermi con larghezza compresa tra 487px a 767px */
   @media (min-width: 487px) and (max-width: 767px) {
     align-self: center !important;
     margin: 0 !important;
@@ -169,7 +124,8 @@ const DivData = styled.div`
 
 const Container = styled.div``;
 const Bimillenario = styled.p`
-  animation: fadeIn 1s ease-in-out;
+  /* Stili rimossi per l'effetto di transizione */
+  /* animation: fadeIn 1s ease-in-out; */
   font-size: 1.5rem !important;
   margin-bottom: 0;
   @media (max-width: 487px) {
@@ -181,7 +137,8 @@ const Bimillenario = styled.p`
 
 const ContainerJumbotron = styled.div`
   margin-bottom: 6rem;
-  animation: fadeIn 1s ease-in-out;
+  /* Stili rimossi per l'effetto di transizione */
+  /* animation: fadeIn 1s ease-in-out; */
   animation-fill-mode: both;
   text-align: start;
   margin-left: 2rem;
@@ -195,7 +152,6 @@ const ContainerJumbotron = styled.div`
     justify-content: center !important;
     margin-left: 0;
   }
-  /* Stile per schermi con larghezza compresa tra 768px a 902px */
   @media (min-width: 487px) and (max-width: 767px) {
     display: flex !important;
     justify-content: center !important;
@@ -206,19 +162,18 @@ const ContainerJumbotron = styled.div`
     flex-direction: column !important;
   }
 `;
+
 const ContainerDescrizione = styled.p``;
 const FraseEffetto = styled.p`
-animation: fadeIn 1s ease-in-out;
-  @media (max-width: 435px) {
-    font-size: 0.7rem !important;
-    margin-top 1rem;
-  }
+  /* Stili rimossi per l'effetto di transizione */
+  /* animation: fadeIn 1s ease-in-out; */
 `;
-const Descrizione = styled.p`
-color: rgb(255 125 0);
 
-animation: comparsaDestra 1s ease-in-out;
-margin:0;
+const Descrizione = styled.p`
+  color: rgb(255 125 0);
+  /* Stili rimossi per l'effetto di transizione */
+  /* animation: comparsaDestra 1s ease-in-out; */
+  margin: 0;
   font-size: 0.7rem !important;
   text-align: center;
   @media (max-width: 500px) {
@@ -226,16 +181,13 @@ margin:0;
     font-size 0.7rem !important;
     margin-left: 0 !Important;
   }
-  /* Stile per schermi con larghezza compresa tra 768px a 902px */
   @media (min-width: 485px) and (max-width: 571px) {
-
     font-size 1.2rem !important;
     margin-left: 0 !Important;
-
-  } 
+  }
   @media (min-width: 350px) and (max-width: 564px) {
     font-size 0.8rem !important;
-  } 
+  }
   text-align: start;
   font-weight: bolder;
 `;

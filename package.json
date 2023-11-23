@@ -6,6 +6,8 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@fortawesome/fontawesome-free": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.11.16",
     "@testing-library/jest-dom": "^5.16.5",
@@ -20,6 +22,7 @@
     "react-icons": "^4.8.0",
     "react-router-dom": "^5.3.0",
     "react-scripts": "5.0.1",
+    "react-spring": "^9.7.3",
     "styled-components": "^5.3.10",
     "web-vitals": "^2.1.4"
   },
@@ -46,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.5"
   }
 }

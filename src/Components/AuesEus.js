@@ -1,6 +1,7 @@
 import React from "react";
 import aueseusvesuvio from "./Immagini/aueseusvesuvio.png";
 import cratere from "./Immagini/Cratere.jpeg";
+import auesLogo from "./Immagini/auesLogos.png";
 
 import styled from "styled-components";
 
@@ -26,7 +27,7 @@ const TitoloSezione = styled.h1`
   }
 `;
 const Descrizione = styled.p`
-  font-size: 1.1rem ;
+  font-size: 1rem ;
 
   text-align: start;
   margin-bottom: 30px;
@@ -67,7 +68,7 @@ const CenteredDiv = styled.div`
   }
 `;
 const Sezione = styled.div`
-  margin: 5rem 10rem !important;
+  margin: 1rem 10rem !important;
   @media (max-width: 487px) {
     h3,
     h2,
@@ -118,11 +119,17 @@ export default function Patrocini() {
         </div>
         <CenteredDiv class="row align-items-center justify-content-center">
           <Sezione class="col-xl-12 col-lg-12 col-md-10">
+          <div className="col-12 d-flex justify-content-center">
+              <img
+                className="img-fluid col-xl-7 col-lg-8 col-md-7 rounded-3 mb-2"
+                src={auesLogo}
+              />
+            </div>
             <div className="d-flex flex-column">
               <h2 className="text-center" style={{ color: "rgb(255 125 0)" }}>
                 PRIMA LETTERA DI PLINIO IL GIOVANE A TACITO
               </h2>
-              <p className="pt-4">
+              <Descrizione className="pt-4">
                 "Mio zio si trovava a Miseno dove comandava la flotta. Il 24
                 agosto, nel primo pomeriggio, mia madre attirò la sua attenzione
                 su una nube di straordinaria forma e grandezza. Egli aveva fatto
@@ -221,7 +228,7 @@ export default function Patrocini() {
                 al momento della partenza; l'aspetto era quello di un uomo
                 addormentato, piuttosto che d'un morto." Versione tradotta dal
                 latino di Plinio Caio Gracco (da Pompei Online)
-              </p>
+              </Descrizione>
             </div>
             <div class=" d-flex justify-content-center p-0 mt-5">
               <div className=" d-flex flex-column justify-content-center text-center">

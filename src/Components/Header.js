@@ -16,6 +16,10 @@ import {
   MDBNavbarLink,
   MDBIcon,
   MDBCollapse,
+  MDBDropdown,
+  MDBDropdownMenu,
+  MDBDropdownToggle,
+  MDBDropdownItem,
 } from "mdb-react-ui-kit";
 import styled from "styled-components";
 
@@ -61,6 +65,31 @@ const Hamburger = styled(MDBNavbarToggler)`
 const Ul = styled(MDBNavbarNav)`
   justify-content: end;
 `;
+
+const LinkAnnidato = styled(MDBDropdownItem)`text-decoration: none;
+color: white;
+font-size: 1.1em;
+position: relative;
+
+&:hover {
+  color: #ffde14;
+}
+
+&::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: #ffde14;
+  width: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+&:hover::after {
+  width: 100%;
+}`
+
 const Link = styled(MDBNavbarLink)`
   text-decoration: none;
   color: white;
@@ -215,21 +244,27 @@ export default function Header() {
           <Link translate="no" className="mx-2" href="/">
             Home
           </Link>
-          <Link className="mx-2" href="/chi-siamo">
+          <Link className="mx-1" href="/chi-siamo">
             Chi siamo
           </Link>
-          <Link className="mx-2" href="/aues-eus">
-            Aues Eus
-          </Link>
+          <MDBDropdown>
+                <MDBDropdownToggle tag='a' className='nav-link' role='button'>
+                  Eventi
+                </MDBDropdownToggle>
+                <MDBDropdownMenu>
+                  <LinkAnnidato link href="/aues-eus">Aues Eus</LinkAnnidato>
+                  <LinkAnnidato link href="/scintilla">Scintilla dell'ingegno</LinkAnnidato>
+                </MDBDropdownMenu>
+              </MDBDropdown>
 
-          <Link className="mx-2" href="/patrocini">
+          <Link className="mx-1" href="/patrocini">
             Patrocini
           </Link>
-          <Link translate="no" className="mx-2" href="/news">
+          <Link translate="no" className="mx-1" href="/news">
             News
           </Link>
 
-          <Link className="mx-2" href="/contatti">
+          <Link className="mx-1" href="/contatti">
             Contatti
           </Link>
         </MDBCollapse>
