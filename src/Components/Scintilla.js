@@ -103,6 +103,47 @@ const Descrizione = styled.p`
 
 
 `;
+const CenteredDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .container-imamgine-descrizione {
+    padding-right: 0;
+
+    @media (max-width: 991px) {
+      padding-right: 0 !important;
+    }
+  }
+
+  @media (max-width: 991px) {
+    flex-direction: column;
+
+    .descrizioni {
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+`;
+const Sezione = styled.div`
+  margin: 1rem 10rem !important;
+  @media (max-width: 487px) {
+    h3,
+    h2,
+    h5 {
+      font-size: 1rem;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  @media (max-width: 1060px) {
+    margin: 5rem 4rem !important;
+  }
+  @media (max-width: 570px) {
+    margin: 5rem 2rem !important;
+  }
+`;
 
 
 export default function Scintilla() {
@@ -135,13 +176,16 @@ export default function Scintilla() {
                 src={scintillaLogo}
               />
             </div>
-            <h2 className="text-center my-5" style={{ color: "rgb(255 125 0)" }}>
-                FOTO DELL'EVENTO
-              </h2>
-            <ImageGallery images={images}/>
+       
+           <Sezione class="col-xl-12 col-lg-12 col-md-10">
+              <h2 className="text-center my-5" style={{ color: "rgb(255 125 0)" }}>
+                  FOTO DELL'EVENTO
+                </h2>
+              <ImageGallery images={images}/>
 
           
-   
+            </Sezione>
+  
 
     </PatrociniSection>
   );

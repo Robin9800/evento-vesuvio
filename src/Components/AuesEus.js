@@ -1,9 +1,52 @@
 import React from "react";
 import aueseusvesuvio from "./Immagini/aueseusvesuvio.png";
+import ImageGallery from "./ImageGallery";
 import cratere from "./Immagini/Cratere.jpeg";
-import auesLogo from "./Immagini/auesLogos.png";
-
+import Auesimg from "./Immagini/Auesimg.jpeg"
+import Auesimg1 from "./Immagini/Auesimg1.jpeg"
+import Auesimg2 from "./Immagini/Auesimg2.jpeg"
+import Auesimg3 from "./Immagini/Auesimg3.jpeg"
+import Auesimg4 from "./Immagini/Auesimg4.jpeg"
+import Auesimg5 from "./Immagini/Auesimg5.jpeg"
+import Auesimg6 from "./Immagini/Auesimg6.jpeg"
+import Auesimg7 from "./Immagini/Auesimg7.jpeg"
+import Auesimg8 from "./Immagini/Auesimg8.jpeg"
+import Auesimg9 from "./Immagini/Auesimg9.jpeg"
+import Auesimg10 from "./Immagini/Auesimg10.jpeg"
+import Auesimg11 from "./Immagini/Auesimg11.jpeg"
+import Auesimg12 from "./Immagini/Auesimg12.jpeg"
+import Auesimg13 from "./Immagini/Auesimg13.jpeg"
+import Auesimg15 from "./Immagini/Auesimg15.jpeg"
+import Auesimg16 from "./Immagini/Auesimg16.jpeg"
+import Auesimg17 from "./Immagini/Auesimg17.jpeg"
+import Auesimg18 from "./Immagini/Auesimg18.jpeg"
+import Auesimg19 from "./Immagini/Auesimg19.jpeg"
+import Auesimg20 from "./Immagini/Auesimg20.jpeg"
+import AuesManifesto from "./Immagini/AuesManifesto.jpeg"
 import styled from "styled-components";
+
+const images = [Auesimg,
+  Auesimg1,
+  Auesimg2,
+  Auesimg3,
+  Auesimg4,
+  Auesimg5,
+  Auesimg6,
+  Auesimg7,
+  Auesimg8,
+  Auesimg9,
+  Auesimg10,
+  Auesimg11,
+  Auesimg12,
+  Auesimg13,
+  Auesimg15,
+  Auesimg16,
+  Auesimg17,
+  Auesimg18,
+  Auesimg19,
+  Auesimg20,
+]
+
 
 const Container = styled.div`
   margin: 0 !important;
@@ -121,8 +164,8 @@ export default function Patrocini() {
           <Sezione class="col-xl-12 col-lg-12 col-md-10">
           <div className="col-12 d-flex justify-content-center">
               <img
-                className="img-fluid col-xl-7 col-lg-8 col-md-7 rounded-3 mb-2"
-                src={auesLogo}
+                className="img-fluid col-xl-7 col-lg-8 col-md-7 rounded-3 mt-4 mb-5"
+                src={AuesManifesto}
               />
             </div>
             <div className="d-flex flex-column">
@@ -324,7 +367,7 @@ export default function Patrocini() {
             <h2 className="text-center my-5" style={{ color: "rgb(255 125 0)" }}>
                 FOTO DELL'EVENTO
               </h2>
-            {/* <ImageGallery images={images}/> */}
+            <ImageGallery images={images}/> 
           </Sezione>
         </CenteredDiv>
       </Container>
