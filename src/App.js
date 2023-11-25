@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Components/Header";
 import Jumbotron from "./Components/Jumbotron";
-import Carosello from "./Components/Carosello"
+import Carosello from "./Components/Carosello";
 import ChiSiamo from "./Components/ChiSiamo";
 import AuesEus from "./Components/AuesEus";
 import Patrocini from "./Components/Patrocini";
@@ -17,7 +17,7 @@ const App = () => {
     <BrowserRouter>
       <Header />
       <Switch>
-        <Route exact path="/" component={Carosello} />
+        <Route exact path="/" component={Jumbotron} />
         <Route path="/chi-siamo" component={ChiSiamo} />
         <Route path="/aues-eus" component={AuesEus} />
         <Route path="/patrocini" component={Patrocini} />

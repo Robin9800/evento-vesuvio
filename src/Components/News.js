@@ -15,6 +15,13 @@ import NapoliVillage from "./Immagini/napolivillage.png";
 import TerronianMagazine from "./Immagini/terronianmagazine.png";
 import NewsExpress from "./Immagini/newsexpress.jpg";
 import NapoliFactory from "./Immagini/napolifactory.jpeg";
+import Scintillaimg1 from "./Immagini/Scintillaimg1.jpeg";
+import PubblicaNow from "./Immagini/pubblicanow.png";
+import scintillaLogo from "./Immagini/AuesManifesto.jpeg";
+import IlDesk from "./Immagini/ildesk.png";
+import IlDeskImg from "./Immagini/ildeskimg.webp";
+import EssereAltrove from "./Immagini/esserealtrove.jpg";
+import EssereAltroveimg from "./Immagini/esserealtroveimg.jpg";
 
 import styled from "styled-components";
 
@@ -185,6 +192,38 @@ export default function Contatti() {
               text="Ercolano, al Mav il progetto Vesuvio per bimillenario nascita di Plinio il Vecchio"
               image={Cult}
               url="https://bit.ly/3NWWcPS"
+            />
+            <NewsCard
+              className="my-3 fade-in fs-5"
+              date="08/10/2023"
+              text="VIII Edizione del Premio Scintilla dell’ingegno sul cono del Vesuvio"
+              image={Scintillaimg1}
+              mediaImage={NapoliFactory}
+              url="https://www.napolifactory.it/2023/10/08/viii-edizione-del-premio-scintilla-dellingegno-sul-cono-del-vesuvio/"
+            />
+            <NewsCard
+              className="my-3 fade-in fs-5"
+              date="06/10/2023"
+              text="Scintilla dell’Ingegno, VIII edizione del Premio sul cono del Vesuvio"
+              image={scintillaLogo}
+              mediaImage={PubblicaNow}
+              url="https://www.pubblicanow.it/2023/10/06/scintilla-dellingegno-viii-edizione-del-premio-sul-cono-del-vesuvio/"
+            />
+            <NewsCard
+              className="my-3 fade-in fs-5"
+              date="10/10/2023"
+              text="Napoli, le eccellenze della ‘scintilla’ premiati sul Vesuvio"
+              image={IlDeskImg}
+              mediaImage={IlDesk}
+              url="https://www.ildesk.it/arte-e-cultura/napoli-le-eccellenze-della-scintilla-premiati-sul-vesuvio/"
+            />
+            <NewsCard
+              className="my-3 fade-in fs-5"
+              date="09/10/2023"
+              text="Servizio Premio Scintilla 2023"
+              image={EssereAltroveimg}
+              mediaImage={EssereAltrove}
+              url="https://www.facebook.com/photo/?fbid=762458162562287&set=a.469400998534673&locale=it_IT"
             />
           </DivGiornali>
         </div>

@@ -1,6 +1,8 @@
 import React from "react";
 import Vesuvio from "./Immagini/Vesuvioo.jpeg";
 import styled from "styled-components";
+import ScintillaLogo from "./Immagini/scintillamanifesto.jpg";
+import { MDBNavbarLink } from "mdb-react-ui-kit";
 
 const Data = styled.span`
   a {
@@ -191,6 +193,53 @@ const Descrizione = styled.p`
   text-align: start;
   font-weight: bolder;
 `;
+const Link = styled(MDBNavbarLink)`
+  text-decoration: none;
+  color: white;
+  font-size: 1.1em;
+  position: relative;
+
+  &:hover {
+    color: #ffde14;
+  }
+
+  &.active {
+    background-color: transparent !important;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: #ffde14;
+    width: 0;
+    transition: width 0.3s ease-in-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  /* Stile per schermi con larghezza compresa tra 576px e 768px */
+  @media (min-width: 992px) and (max-width: 1170px) {
+    font-size: 0.7rem;
+  }
+  @media (max-width: 914px) {
+    flex-direction: column !important;
+  }
+`;
+const MainContainer = styled.div`
+  @media (max-width: 914px) {
+    flex-direction: column !important;
+  }
+  .vesuvio {
+    @media (max-width: 914px) {
+      width: 100vw !important;
+    }
+  }
+`;
 
 const Jumbotron = () => {
   const link = [
@@ -202,73 +251,100 @@ const Jumbotron = () => {
   ];
 
   return (
-    <div
-      className="px-5 text-center bg-image"
-      style={{
-        backgroundImage: `url(${Vesuvio})`,
-        height: "100vh",
-        backgroundPosition: "bottom",
-      }}
+    <MainContainer
+      className=" bg-image"
+      style={{ height: "100%", display: "flex" }}
     >
-      <div className="mask" style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}>
-        <Container className=" d-flex flex-column align-items-center justify-content-center mt-5 pt-5 h-100">
-          <ContainerJumbotron className="text-white d-flex justify-content-between">
-            <div className="d-flex col-xl-8 col-lg-8 col-md-16 flex-column">
-              <Titolo>AUES EUS</Titolo>
-              <Titolo style={{ marginBottom: "0" }}>
-                VESUVIO LUCE CHE BRUCIA
-              </Titolo>
-              <Em style={{ fontSize: "2rem" }}>
-                Plinio il vecchio intuisce/scolpisce il magma
-              </Em>
-            </div>
-            <DivData className="d-flex flex-column">
-              <Descrizione>
-                «Con il Patrocinio della Città Metropolitana di Napoli»
-              </Descrizione>
-              <Descrizione>
-                Questa iniziativa è contro il “sistema” della camorra
-              </Descrizione>
-            </DivData>
-          </ContainerJumbotron>
-          <ContainerDescrizione className="mt-5">
-            <Bimillenario
-              style={{
-                fontSize: "4rem",
-                color: "#e58730",
-                fontStyle: "italic",
-              }}
-            >
-              BIMILLENNARIO DELLA NASCITA DI PLINIO IL VECCHIO (Como 23- Stabia
-              79)
-            </Bimillenario>
-            <Data className="font-italic" style={{ width: "275px" }}>
-              <a target="_blank" rel="noopener noreferrer" href={link[0].url}>
-                <i
-                  class="fa-solid fa-location-dot"
-                  style={{ color: "red" }}
-                ></i>{" "}
-                Parco Nazionale del Vesuvio Gran Cono - 19 maggio 2023 h. 10:00
-              </a>
-            </Data>
-            <FraseEffetto
-              style={{
-                color: "white",
-                fontStyle: "italic",
-              }}
-            >
-              Quando la storia si esaurisce ...comincia la creatività
-            </FraseEffetto>
+      <Link className=" p-0" href="/aues-eus">
+        <div
+          className="vesuvio px-5 text-center bg-image"
+          style={{
+            backgroundImage: `url(${Vesuvio})`,
+            height: "100vh",
+            width: "50vw",
+            backgroundPosition: "bottom",
+          }}
+        >
+          <div
+            className="mask"
+            style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+          >
+            <Container className=" d-flex flex-column align-items-center justify-content-center mt-5 pt-5 h-100">
+              <ContainerJumbotron className="text-white d-flex justify-content-between">
+                <div className="d-flex col-xl-8 col-lg-8 col-md-16 flex-column">
+                  <Titolo>AUES EUS</Titolo>
+                  <Titolo style={{ marginBottom: "0" }}>
+                    VESUVIO LUCE CHE BRUCIA
+                  </Titolo>
+                  <Em style={{ fontSize: "2rem" }}>
+                    Plinio il vecchio intuisce/scolpisce il magma
+                  </Em>
+                </div>
+                <DivData className="d-flex flex-column">
+                  <Descrizione>
+                    «Con il Patrocinio della Città Metropolitana di Napoli»
+                  </Descrizione>
+                  <Descrizione>
+                    Questa iniziativa è contro il “sistema” della camorra
+                  </Descrizione>
+                </DivData>
+              </ContainerJumbotron>
+              <ContainerDescrizione className="mt-5">
+                <Bimillenario
+                  style={{
+                    fontSize: "4rem",
+                    color: "#e58730",
+                    fontStyle: "italic",
+                  }}
+                >
+                  BIMILLENNARIO DELLA NASCITA DI PLINIO IL VECCHIO (Como 23-
+                  Stabia 79)
+                </Bimillenario>
+                <Data className="font-italic" style={{ width: "275px" }}>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={link[0].url}
+                  >
+                    <i
+                      class="fa-solid fa-location-dot"
+                      style={{ color: "red" }}
+                    ></i>{" "}
+                    Parco Nazionale del Vesuvio Gran Cono - 19 maggio 2023 h.
+                    10:00
+                  </a>
+                </Data>
+                <FraseEffetto
+                  style={{
+                    color: "white",
+                    fontStyle: "italic",
+                  }}
+                >
+                  Quando la storia si esaurisce ...comincia la creatività
+                </FraseEffetto>
 
-            <P>
-              È un’ incursione di Enzo Marino nell’animo e nell’esperienza
-              trascendente di Gaius Plinius Secundus mentre lascia l’"ager
-              stabianus” per inoltrarsi nel mondo dell’Ade.
-            </P>
-          </ContainerDescrizione>
-        </Container>
-      </div>
-    </div>
+                <P>
+                  È un’ incursione di Enzo Marino nell’animo e nell’esperienza
+                  trascendente di Gaius Plinius Secundus mentre lascia l’"ager
+                  stabianus” per inoltrarsi nel mondo dell’Ade.
+                </P>
+              </ContainerDescrizione>
+            </Container>
+          </div>
+        </div>
+      </Link>
+      <Link className=" p-0" href="/scintilla">
+        <div
+          className="bg-image-half"
+          style={{
+            backgroundImage: `url(${ScintillaLogo})`,
+            height: "100%",
+            width: "50vw",
+            backgroundPosition: "bottom",
+          }}
+        ></div>
+      </Link>
+    </MainContainer>
   );
 };
 
